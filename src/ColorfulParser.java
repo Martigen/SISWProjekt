@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/Projekt\Colorful.g4 by ANTLR 4.8
+// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -30,7 +30,7 @@ public class ColorfulParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'White'", "'Black'", "'('", "')'", "'Gold'", "'Light'", "'Dark'", 
+			null, "'Black'", "'White'", "'('", "')'", "'Gold'", "'Light'", "'Dark'", 
 			"'mix'", "'>'", "'<'", "'pink'", "'orange'", "'red'", "'blue'"
 		};
 	}
@@ -138,7 +138,7 @@ public class ColorfulParser extends Parser {
 				setState(17); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__2) | (1L << T__4) | (1L << ID) | (1L << INT) | (1L << NEWLINE))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__4) | (1L << ID) | (1L << INT) | (1L << NEWLINE))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -309,7 +309,7 @@ public class ColorfulParser extends Parser {
 		StatContext _localctx = new StatContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_stat);
 		try {
-			setState(43);
+			setState(44);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
@@ -317,8 +317,10 @@ public class ColorfulParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(19);
-				expr(0);
+				match(T__0);
 				setState(20);
+				expr(0);
+				setState(21);
 				match(NEWLINE);
 				}
 				break;
@@ -326,13 +328,13 @@ public class ColorfulParser extends Parser {
 				_localctx = new AssignContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(22);
-				match(ID);
 				setState(23);
-				match(EQ);
+				match(ID);
 				setState(24);
-				expr(0);
+				match(EQ);
 				setState(25);
+				expr(0);
+				setState(26);
 				match(NEWLINE);
 				}
 				break;
@@ -340,9 +342,9 @@ public class ColorfulParser extends Parser {
 				_localctx = new WhileLoopContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(27);
-				loop();
 				setState(28);
+				loop();
+				setState(29);
 				match(NEWLINE);
 				}
 				break;
@@ -350,9 +352,9 @@ public class ColorfulParser extends Parser {
 				_localctx = new RelatContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(30);
-				relational();
 				setState(31);
+				relational();
+				setState(32);
 				match(NEWLINE);
 				}
 				break;
@@ -360,9 +362,9 @@ public class ColorfulParser extends Parser {
 				_localctx = new OutputContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(33);
-				black();
 				setState(34);
+				black();
+				setState(35);
 				match(NEWLINE);
 				}
 				break;
@@ -370,15 +372,15 @@ public class ColorfulParser extends Parser {
 				_localctx = new InputContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(36);
-				match(ID);
 				setState(37);
-				match(EQ);
+				match(ID);
 				setState(38);
-				match(T__0);
+				match(EQ);
 				setState(39);
-				white();
+				match(T__1);
 				setState(40);
+				white();
+				setState(41);
 				match(NEWLINE);
 				}
 				break;
@@ -386,7 +388,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new BlankContext(_localctx);
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(42);
+				setState(43);
 				match(NEWLINE);
 				}
 				break;
@@ -439,9 +441,9 @@ public class ColorfulParser extends Parser {
 			_localctx = new OutContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(45);
-			match(T__1);
 			setState(46);
+			match(T__0);
+			setState(47);
 			match(INT);
 			}
 		}
@@ -492,7 +494,7 @@ public class ColorfulParser extends Parser {
 			_localctx = new InContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(48);
+			setState(49);
 			match(INT);
 			}
 		}
@@ -638,7 +640,7 @@ public class ColorfulParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(57);
+			setState(58);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case INT:
@@ -647,7 +649,7 @@ public class ColorfulParser extends Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(51);
+				setState(52);
 				match(INT);
 				}
 				break;
@@ -656,7 +658,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new IdContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(52);
+				setState(53);
 				match(ID);
 				}
 				break;
@@ -665,11 +667,11 @@ public class ColorfulParser extends Parser {
 				_localctx = new ParensContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(53);
-				match(T__2);
 				setState(54);
-				expr(0);
+				match(T__2);
 				setState(55);
+				expr(0);
+				setState(56);
 				match(T__3);
 				}
 				break;
@@ -677,7 +679,7 @@ public class ColorfulParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(67);
+			setState(68);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -685,16 +687,16 @@ public class ColorfulParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(65);
+					setState(66);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
 					case 1:
 						{
 						_localctx = new MulDivContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(59);
-						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
 						setState(60);
+						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
+						setState(61);
 						((MulDivContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==MUL || _la==DIV) ) {
@@ -705,7 +707,7 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(61);
+						setState(62);
 						expr(6);
 						}
 						break;
@@ -713,9 +715,9 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new AddSubContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(62);
-						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
 						setState(63);
+						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						setState(64);
 						((AddSubContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==ADD || _la==SUB) ) {
@@ -726,14 +728,14 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(64);
+						setState(65);
 						expr(5);
 						}
 						break;
 					}
 					} 
 				}
-				setState(69);
+				setState(70);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			}
@@ -795,9 +797,9 @@ public class ColorfulParser extends Parser {
 			_localctx = new GreaterEqualContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(70);
-			expr(0);
 			setState(71);
+			expr(0);
+			setState(72);
 			((GreaterEqualContext)_localctx).op = _input.LT(1);
 			_la = _input.LA(1);
 			if ( !(_la==GREATER || _la==LESS) ) {
@@ -808,7 +810,7 @@ public class ColorfulParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(72);
+			setState(73);
 			expr(0);
 			}
 		}
@@ -869,41 +871,41 @@ public class ColorfulParser extends Parser {
 			_localctx = new WhileContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(74);
-			match(T__4);
 			setState(75);
-			match(T__2);
+			match(T__4);
 			setState(76);
-			relational();
+			match(T__2);
 			setState(77);
+			relational();
+			setState(78);
 			match(T__3);
-			setState(79);
+			setState(80);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==NEWLINE) {
 				{
-				setState(78);
+				setState(79);
 				match(NEWLINE);
 				}
 			}
 
-			setState(81);
+			setState(82);
 			match(T__5);
-			setState(85);
+			setState(86);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__2) | (1L << T__4) | (1L << ID) | (1L << INT) | (1L << NEWLINE))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__4) | (1L << ID) | (1L << INT) | (1L << NEWLINE))) != 0)) {
 				{
 				{
-				setState(82);
+				setState(83);
 				stat();
 				}
 				}
-				setState(87);
+				setState(88);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(88);
+			setState(89);
 			match(T__6);
 			}
 		}
@@ -936,29 +938,30 @@ public class ColorfulParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24]\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24^\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\3\2\6\2\22\n\2\r\2\16\2\23"+
 		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3.\n\3\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\6\3"+
-		"\6\3\6\3\6\3\6\5\6<\n\6\3\6\3\6\3\6\3\6\3\6\3\6\7\6D\n\6\f\6\16\6G\13"+
-		"\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\5\bR\n\b\3\b\3\b\7\bV\n\b\f\b\16"+
-		"\bY\13\b\3\b\3\b\3\b\2\3\n\t\2\4\6\b\n\f\16\2\5\3\2\r\16\3\2\17\20\3\2"+
-		"\13\f\2b\2\21\3\2\2\2\4-\3\2\2\2\6/\3\2\2\2\b\62\3\2\2\2\n;\3\2\2\2\f"+
-		"H\3\2\2\2\16L\3\2\2\2\20\22\5\4\3\2\21\20\3\2\2\2\22\23\3\2\2\2\23\21"+
-		"\3\2\2\2\23\24\3\2\2\2\24\3\3\2\2\2\25\26\5\n\6\2\26\27\7\23\2\2\27.\3"+
-		"\2\2\2\30\31\7\21\2\2\31\32\7\n\2\2\32\33\5\n\6\2\33\34\7\23\2\2\34.\3"+
-		"\2\2\2\35\36\5\16\b\2\36\37\7\23\2\2\37.\3\2\2\2 !\5\f\7\2!\"\7\23\2\2"+
-		"\".\3\2\2\2#$\5\6\4\2$%\7\23\2\2%.\3\2\2\2&\'\7\21\2\2\'(\7\n\2\2()\7"+
-		"\3\2\2)*\5\b\5\2*+\7\23\2\2+.\3\2\2\2,.\7\23\2\2-\25\3\2\2\2-\30\3\2\2"+
-		"\2-\35\3\2\2\2- \3\2\2\2-#\3\2\2\2-&\3\2\2\2-,\3\2\2\2.\5\3\2\2\2/\60"+
-		"\7\4\2\2\60\61\7\22\2\2\61\7\3\2\2\2\62\63\7\22\2\2\63\t\3\2\2\2\64\65"+
-		"\b\6\1\2\65<\7\22\2\2\66<\7\21\2\2\678\7\5\2\289\5\n\6\29:\7\6\2\2:<\3"+
-		"\2\2\2;\64\3\2\2\2;\66\3\2\2\2;\67\3\2\2\2<E\3\2\2\2=>\f\7\2\2>?\t\2\2"+
-		"\2?D\5\n\6\b@A\f\6\2\2AB\t\3\2\2BD\5\n\6\7C=\3\2\2\2C@\3\2\2\2DG\3\2\2"+
-		"\2EC\3\2\2\2EF\3\2\2\2F\13\3\2\2\2GE\3\2\2\2HI\5\n\6\2IJ\t\4\2\2JK\5\n"+
-		"\6\2K\r\3\2\2\2LM\7\7\2\2MN\7\5\2\2NO\5\f\7\2OQ\7\6\2\2PR\7\23\2\2QP\3"+
-		"\2\2\2QR\3\2\2\2RS\3\2\2\2SW\7\b\2\2TV\5\4\3\2UT\3\2\2\2VY\3\2\2\2WU\3"+
-		"\2\2\2WX\3\2\2\2XZ\3\2\2\2YW\3\2\2\2Z[\7\t\2\2[\17\3\2\2\2\t\23-;CEQW";
+		"\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\5\3/\n\3\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3"+
+		"\6\3\6\3\6\3\6\3\6\5\6=\n\6\3\6\3\6\3\6\3\6\3\6\3\6\7\6E\n\6\f\6\16\6"+
+		"H\13\6\3\7\3\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\5\bS\n\b\3\b\3\b\7\bW\n\b\f"+
+		"\b\16\bZ\13\b\3\b\3\b\3\b\2\3\n\t\2\4\6\b\n\f\16\2\5\3\2\r\16\3\2\17\20"+
+		"\3\2\13\f\2c\2\21\3\2\2\2\4.\3\2\2\2\6\60\3\2\2\2\b\63\3\2\2\2\n<\3\2"+
+		"\2\2\fI\3\2\2\2\16M\3\2\2\2\20\22\5\4\3\2\21\20\3\2\2\2\22\23\3\2\2\2"+
+		"\23\21\3\2\2\2\23\24\3\2\2\2\24\3\3\2\2\2\25\26\7\3\2\2\26\27\5\n\6\2"+
+		"\27\30\7\23\2\2\30/\3\2\2\2\31\32\7\21\2\2\32\33\7\n\2\2\33\34\5\n\6\2"+
+		"\34\35\7\23\2\2\35/\3\2\2\2\36\37\5\16\b\2\37 \7\23\2\2 /\3\2\2\2!\"\5"+
+		"\f\7\2\"#\7\23\2\2#/\3\2\2\2$%\5\6\4\2%&\7\23\2\2&/\3\2\2\2\'(\7\21\2"+
+		"\2()\7\n\2\2)*\7\4\2\2*+\5\b\5\2+,\7\23\2\2,/\3\2\2\2-/\7\23\2\2.\25\3"+
+		"\2\2\2.\31\3\2\2\2.\36\3\2\2\2.!\3\2\2\2.$\3\2\2\2.\'\3\2\2\2.-\3\2\2"+
+		"\2/\5\3\2\2\2\60\61\7\3\2\2\61\62\7\22\2\2\62\7\3\2\2\2\63\64\7\22\2\2"+
+		"\64\t\3\2\2\2\65\66\b\6\1\2\66=\7\22\2\2\67=\7\21\2\289\7\5\2\29:\5\n"+
+		"\6\2:;\7\6\2\2;=\3\2\2\2<\65\3\2\2\2<\67\3\2\2\2<8\3\2\2\2=F\3\2\2\2>"+
+		"?\f\7\2\2?@\t\2\2\2@E\5\n\6\bAB\f\6\2\2BC\t\3\2\2CE\5\n\6\7D>\3\2\2\2"+
+		"DA\3\2\2\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2G\13\3\2\2\2HF\3\2\2\2IJ\5\n\6"+
+		"\2JK\t\4\2\2KL\5\n\6\2L\r\3\2\2\2MN\7\7\2\2NO\7\5\2\2OP\5\f\7\2PR\7\6"+
+		"\2\2QS\7\23\2\2RQ\3\2\2\2RS\3\2\2\2ST\3\2\2\2TX\7\b\2\2UW\5\4\3\2VU\3"+
+		"\2\2\2WZ\3\2\2\2XV\3\2\2\2XY\3\2\2\2Y[\3\2\2\2ZX\3\2\2\2[\\\7\t\2\2\\"+
+		"\17\3\2\2\2\t\23.<DFRX";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

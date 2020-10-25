@@ -62,16 +62,16 @@ grammar Colorful;
 //   ;
 prog:   stat+ ;
 
-stat:   expr NEWLINE                # printExpr
-    |   ID 'mix' expr NEWLINE         # assign
+stat:   'Black' expr NEWLINE        # printExpr
+    |   ID 'mix' expr NEWLINE       # assign
     |   loop NEWLINE                # whileLoop
     |   relational NEWLINE          # relat
-    |   black NEWLINE       # output
+    |   black NEWLINE               # output
     |   ID 'mix' 'White' white NEWLINE  # input
     |   NEWLINE                     # blank
     ;
 
-black : 'Black' INT       #out;
+black : 'Black' INT        #out;
 white : INT       #in;
 
 expr:   expr op=('pink'|'orange') expr      # MulDiv

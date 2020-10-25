@@ -26,7 +26,7 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/Colorful.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="D:\Szkola\Semestr_9\SISW\Projekt\src" />
+          <option name="outputDir" value="D:\Szkola\Semestr_9\SISW\SISWProjekt\src" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />

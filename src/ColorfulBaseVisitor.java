@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/Projekt\Colorful.g4 by ANTLR 4.8
+// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**

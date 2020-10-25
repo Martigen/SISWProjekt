@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/Projekt\Colorful.g4 by ANTLR 4.8
+// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -36,7 +36,7 @@ public class ColorfulLexer extends Lexer {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'White'", "'Black'", "'('", "')'", "'Gold'", "'Light'", "'Dark'", 
+			null, "'Black'", "'White'", "'('", "')'", "'Gold'", "'Light'", "'Dark'", 
 			"'mix'", "'>'", "'<'", "'pink'", "'orange'", "'red'", "'blue'"
 		};
 	}
@@ -122,9 +122,9 @@ public class ColorfulLexer extends Lexer {
 		"\3\2\2\2\2!\3\2\2\2\2#\3\2\2\2\2%\3\2\2\2\3\'\3\2\2\2\5-\3\2\2\2\7\63"+
 		"\3\2\2\2\t\65\3\2\2\2\13\67\3\2\2\2\r<\3\2\2\2\17B\3\2\2\2\21G\3\2\2\2"+
 		"\23K\3\2\2\2\25M\3\2\2\2\27O\3\2\2\2\31T\3\2\2\2\33[\3\2\2\2\35_\3\2\2"+
-		"\2\37e\3\2\2\2!j\3\2\2\2#o\3\2\2\2%t\3\2\2\2\'(\7Y\2\2()\7j\2\2)*\7k\2"+
-		"\2*+\7v\2\2+,\7g\2\2,\4\3\2\2\2-.\7D\2\2./\7n\2\2/\60\7c\2\2\60\61\7e"+
-		"\2\2\61\62\7m\2\2\62\6\3\2\2\2\63\64\7*\2\2\64\b\3\2\2\2\65\66\7+\2\2"+
+		"\2\37e\3\2\2\2!j\3\2\2\2#o\3\2\2\2%t\3\2\2\2\'(\7D\2\2()\7n\2\2)*\7c\2"+
+		"\2*+\7e\2\2+,\7m\2\2,\4\3\2\2\2-.\7Y\2\2./\7j\2\2/\60\7k\2\2\60\61\7v"+
+		"\2\2\61\62\7g\2\2\62\6\3\2\2\2\63\64\7*\2\2\64\b\3\2\2\2\65\66\7+\2\2"+
 		"\66\n\3\2\2\2\678\7I\2\289\7q\2\29:\7n\2\2:;\7f\2\2;\f\3\2\2\2<=\7N\2"+
 		"\2=>\7k\2\2>?\7i\2\2?@\7j\2\2@A\7v\2\2A\16\3\2\2\2BC\7F\2\2CD\7c\2\2D"+
 		"E\7t\2\2EF\7m\2\2F\20\3\2\2\2GH\7o\2\2HI\7k\2\2IJ\7z\2\2J\22\3\2\2\2K"+

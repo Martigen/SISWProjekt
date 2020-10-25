@@ -1,7 +1,7 @@
-2 red 3
+Black 2 red 3
 Black 453453
 n mix 1
 Gold ( n < 10 ) Light
-n
+Black n
 n mix n red 1
 Dark
