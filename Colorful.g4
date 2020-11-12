@@ -100,8 +100,8 @@ CBRACE :        'dark';
 OUT:            'Black';
 
 
-IF :            'transparent'; //TODO
-ELSE :          'violet'; //TODO
+IF :            'transparent';
+ELSE :          'violet';
 WHILE :         'gold';
 
 

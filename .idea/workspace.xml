@@ -20,28 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Colorful.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Colorful.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/colorful.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colorful.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Colorful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyColofrulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColorfulVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,8 +117,16 @@
       <workItem from="1605016445299" duration="15789000" />
       <workItem from="1605092767541" duration="354000" />
       <workItem from="1605114144895" duration="1396000" />
-      <workItem from="1605198620059" duration="2494000" />
+      <workItem from="1605198620059" duration="2629000" />
     </task>
+    <task id="LOCAL-00001" summary="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more.">
+      <created>1605201220408</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605201220408</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +143,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more." />
+    <option name="LAST_COMMIT_MESSAGE" value="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1052" y="244" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1605052270357">
