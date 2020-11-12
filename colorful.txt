@@ -1,7 +1,26 @@
-Black 2 red 3
-Black 453453
-n mix 1
-Gold ( n < 10 ) Light
-Black n
-n mix n red 1
-Dark
+Darkgreen dg
+dg mix 10.0
+Black dg
+
+Darkgreen dg2 mix 20.0
+Black dg2 #output dg2
+
+Purple str1 mix ->10-> pink -2
+Black str1
+
+
+# Brown bool mix true~
+Brown bool mix false~
+
+Green n mix 0
+transparent bool light
+    transparent n > 0 Black ->n jest wieksze od 0->
+    violet transparent n indigo 0 Black ->n rowna sie 0->
+    violet Black ->n jest mniejsze od 0->
+dark violet light
+    Black ->bool jest false wiec if nie zadziala->
+dark
+
+
+Purple emptyStr mix ->->
+Black emptyStr

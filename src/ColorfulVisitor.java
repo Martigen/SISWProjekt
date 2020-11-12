@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -10,121 +10,152 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link ColorfulParser#prog}.
+	 * Visit a parse tree produced by {@link ColorfulParser#parse}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProg(ColorfulParser.ProgContext ctx);
+	T visitParse(ColorfulParser.ParseContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code printExpr}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrintExpr(ColorfulParser.PrintExprContext ctx);
+	T visitBlock(ColorfulParser.BlockContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code assign}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#stat}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssign(ColorfulParser.AssignContext ctx);
+	T visitStat(ColorfulParser.StatContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code whileLoop}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#reserveMemoryForVariable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhileLoop(ColorfulParser.WhileLoopContext ctx);
+	T visitReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code relat}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#assignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRelat(ColorfulParser.RelatContext ctx);
+	T visitAssignment(ColorfulParser.AssignmentContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code output}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#operateOnDeclaredVariable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOutput(ColorfulParser.OutputContext ctx);
+	T visitOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code input}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#if_stat}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInput(ColorfulParser.InputContext ctx);
+	T visitIf_stat(ColorfulParser.If_statContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code blank}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Visit a parse tree produced by {@link ColorfulParser#condition_block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlank(ColorfulParser.BlankContext ctx);
+	T visitCondition_block(ColorfulParser.Condition_blockContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code out}
-	 * labeled alternative in {@link ColorfulParser#black}.
+	 * Visit a parse tree produced by {@link ColorfulParser#stat_block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOut(ColorfulParser.OutContext ctx);
+	T visitStat_block(ColorfulParser.Stat_blockContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code in}
-	 * labeled alternative in {@link ColorfulParser#white}.
+	 * Visit a parse tree produced by {@link ColorfulParser#while_stat}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIn(ColorfulParser.InContext ctx);
+	T visitWhile_stat(ColorfulParser.While_statContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code parens}
+	 * Visit a parse tree produced by {@link ColorfulParser#blackValue}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlackValue(ColorfulParser.BlackValueContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ColorfulParser#blackExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParens(ColorfulParser.ParensContext ctx);
+	T visitMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code MulDiv}
+	 * Visit a parse tree produced by the {@code atomExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulDiv(ColorfulParser.MulDivContext ctx);
+	T visitAtomExpr(ColorfulParser.AtomExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code AddSub}
+	 * Visit a parse tree produced by the {@code additiveExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAddSub(ColorfulParser.AddSubContext ctx);
+	T visitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code id}
+	 * Visit a parse tree produced by the {@code relationalExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitId(ColorfulParser.IdContext ctx);
+	T visitRelationalExpr(ColorfulParser.RelationalExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code int}
+	 * Visit a parse tree produced by the {@code equalityExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInt(ColorfulParser.IntContext ctx);
+	T visitEqualityExpr(ColorfulParser.EqualityExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code GreaterEqual}
-	 * labeled alternative in {@link ColorfulParser#relational}.
+	 * Visit a parse tree produced by the {@code parExpr}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitGreaterEqual(ColorfulParser.GreaterEqualContext ctx);
+	T visitParExpr(ColorfulParser.ParExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code while}
-	 * labeled alternative in {@link ColorfulParser#loop}.
+	 * Visit a parse tree produced by the {@code integerAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhile(ColorfulParser.WhileContext ctx);
+	T visitIntegerAtom(ColorfulParser.IntegerAtomContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code doubleAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDoubleAtom(ColorfulParser.DoubleAtomContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code booleanAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBooleanAtom(ColorfulParser.BooleanAtomContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code idAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdAtom(ColorfulParser.IdAtomContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code stringAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringAtom(ColorfulParser.StringAtomContext ctx);
 }

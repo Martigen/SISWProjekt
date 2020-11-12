@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -16,117 +16,159 @@ public class ColorfulBaseVisitor<T> extends AbstractParseTreeVisitor<T> implemen
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProg(ColorfulParser.ProgContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParse(ColorfulParser.ParseContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrintExpr(ColorfulParser.PrintExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlock(ColorfulParser.BlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssign(ColorfulParser.AssignContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStat(ColorfulParser.StatContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitWhileLoop(ColorfulParser.WhileLoopContext ctx) { return visitChildren(ctx); }
+	@Override public T visitReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRelat(ColorfulParser.RelatContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignment(ColorfulParser.AssignmentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOutput(ColorfulParser.OutputContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInput(ColorfulParser.InputContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIf_stat(ColorfulParser.If_statContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlank(ColorfulParser.BlankContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCondition_block(ColorfulParser.Condition_blockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOut(ColorfulParser.OutContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStat_block(ColorfulParser.Stat_blockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIn(ColorfulParser.InContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWhile_stat(ColorfulParser.While_statContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParens(ColorfulParser.ParensContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlackValue(ColorfulParser.BlackValueContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMulDiv(ColorfulParser.MulDivContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlackExpression(ColorfulParser.BlackExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddSub(ColorfulParser.AddSubContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitId(ColorfulParser.IdContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAtomExpr(ColorfulParser.AtomExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInt(ColorfulParser.IntContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitGreaterEqual(ColorfulParser.GreaterEqualContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRelationalExpr(ColorfulParser.RelationalExprContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitWhile(ColorfulParser.WhileContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEqualityExpr(ColorfulParser.EqualityExprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitParExpr(ColorfulParser.ParExprContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitIntegerAtom(ColorfulParser.IntegerAtomContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitDoubleAtom(ColorfulParser.DoubleAtomContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitBooleanAtom(ColorfulParser.BooleanAtomContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitIdAtom(ColorfulParser.IdAtomContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitStringAtom(ColorfulParser.StringAtomContext ctx) { return visitChildren(ctx); }
 }

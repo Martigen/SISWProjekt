@@ -26,5 +26,15 @@
         <jarDirectory url="file://$USER_HOME$/Downloads/antlr-intellij-plugin-v4-1.14/antlr-intellij-plugin-v4/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/antlr-intellij-plugin-v4/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/antlr-intellij-plugin-v4/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

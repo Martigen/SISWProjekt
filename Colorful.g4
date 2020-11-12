@@ -1,100 +1,137 @@
 grammar Colorful;
 
 
+/** PARSER RULES **/
+parse
+ : block
+ ;
+
+block
+ : stat+
+ ;
+
+ stat:      assignment NEWLINE
+  |         reserveMemoryForVariable NEWLINE
+  |         operateOnDeclaredVariable NEWLINE
+  |         if_stat NEWLINE?
+  |         while_stat NEWLINE?
+  |         blackValue NEWLINE
+  |         blackExpression NEWLINE
+  |         NEWLINE
+//  |         white NEWLINE
+  |         OTHER {System.err.println("Unknown char: " + $OTHER.text);}
+  ;
+
+ reserveMemoryForVariable: TYPE ID
+  ;
+
+ assignment: TYPE ID ASSIGN expr
+  ;
+
+ operateOnDeclaredVariable: ID ASSIGN expr
+  ;
+
+ if_stat: IF condition_block (ELSE IF condition_block)* (ELSE stat_block)?
+  ;
+
+ condition_block: expr stat_block
+  ;
+
+ stat_block: OBRACE block CBRACE
+        |           stat
+  ;
+
+ while_stat: WHILE expr stat_block
+  ;
+
+  // white: (type=TYPE | expr)
+  //  ;
+  //
+
+ blackValue: OUT type=TYPE
+  ;
+
+ blackExpression: OUT expr
+  ;
+
+ expr:              expr op=(MUL | DIV) expr                                #multiplicationExpr
+        |           expr op=(ADD | SUB) expr                                #additiveExpr
+        |           expr op=(GREATER|LESS|GREATER_EQ|LESS_EQ) expr          #relationalExpr
+        |           expr op=(EQ | NEQ) expr                                 #equalityExpr
+        |           atom                                                    #atomExpr
+  ;
+
+ atom:              OPAR expr CPAR                                          #parExpr
+        |           INT                                                     #integerAtom
+        |           DBL                                                     #doubleAtom
+        |           BOOL                                                    #booleanAtom
+        |           ID                                                      #idAtom
+        |           STR                                                     #stringAtom
+  ;
 
 
 
-//WS : [ \t\r\n]+ -> skip;
-//
-//operation   : WHITESPACE* left=NUMBER WHITESPACE* operator='red' WHITESPACE* right=NUMBER
-//            | WHITESPACE* left=NUMBER WHITESPACE* operator='blue' WHITESPACE* right=NUMBER
-//            | WHITESPACE* left=NUMBER WHITESPACE* operator='pink' WHITESPACE* right=NUMBER
-//            | WHITESPACE* left=NUMBER WHITESPACE* operator='orange' WHITESPACE* right=NUMBER;
-//
-//NUMBER : [-0-9]+;
-//WHITESPACE : ' ' -> skip ;
-//
-//
-//ADD : 'red';
-//
-//
-//gold
-//   : statementlist+ EOF
-//   ;
-//
-//statementlist
-//   : statement (';' statement)?
-//   ;
-//
-//statement
-//   : assignstmt
-//   | incrementstmt
-//   | loopstmt
-//   ;
-//
-//assignstmt
-//   : var ':=' number ';'
-//   ;
-//
-//incrementstmt
-//   : var ':=' var ('+' | '-') number
-//   ;
-//
-//loopstmt
-//   : 'Gold' var 'Light' statementlist 'Dark'
-//   ;
-//
-//var
-//   : ID
-//   ;
-//
-//number
-//   : NUMBER
-//   ;
-//
-//ID
-//   : [a-zA-Z] [a-zA-Z0-9]*
-//   ;
-//
-//
-//COMMENT
-//   : '/*' .*? '*/' -> skip
-//   ;
-prog:   stat+ ;
 
-stat:   'Black' expr NEWLINE        # printExpr
-    |   ID 'mix' expr NEWLINE       # assign
-    |   loop NEWLINE                # whileLoop
-    |   relational NEWLINE          # relat
-    |   black NEWLINE               # output
-    |   ID 'mix' 'White' white NEWLINE  # input
-    |   NEWLINE                     # blank
+/** LEXER RULES **/
+TYPE:           INTEGER
+    |           DOUBLE
+    |           STRING
+    |           BOOLEAN
     ;
 
-black : 'Black' INT        #out;
-white : INT       #in;
 
-expr:   expr op=('pink'|'orange') expr      # MulDiv
-    |   expr op=('red'|'blue') expr      # AddSub
-    |   INT                         # int
-    |   ID                          # id
-    |   '(' expr ')'                # parens
+EQ :            'indigo';
+NEQ :           'shake';
+GREATER :       '>';
+LESS :          '<';
+GREATER_EQ :    '>=';
+LESS_EQ :       '<=';
+MUL :           'pink';
+DIV :           'orange';
+ADD :           'red';
+SUB :           'blue';
+
+
+ASSIGN :        'mix';
+OPAR :          '(';
+CPAR :          ')';
+OBRACE :        'light';
+CBRACE :        'dark';
+OUT:            'Black';
+
+
+IF :            'transparent'; //TODO
+ELSE :          'violet'; //TODO
+WHILE :         'gold';
+
+
+INT :           '-'? [0-9]+ ;
+DBL :           '-'? [0-9]+ '.' [0-9]*
+    |           '-'? '.' [0-9]+
     ;
+BOOL:           TRUE | FALSE ;
+STR :           STRLIT ;
 
-relational:     expr op=(GREATER|LESS) expr     # GreaterEqual
-          ;
 
-loop:   'Gold' '('relational')' NEWLINE? 'Light'stat*'Dark'   #while
-    ;
+ID  :           VALID_ID_START VALID_ID_CHAR* ;
+NEWLINE:        '\r'? '\n' | '\r'? '~' ;
+COMMENT:        '#' ~[\r\n]* -> skip ;
+WS  :           [ \t]+ -> skip ;
 
-EQ : 'mix';
-GREATER : '>' ;
-LESS : '<' ;
-MUL :   'pink' ;
-DIV :   'orange' ;
-ADD :   'red' ;
-SUB :   'blue' ;
-ID  :   [a-zA-Z]+ ;
-INT :   [0-9]+ ;
-NEWLINE:'\r'? '\n' ;
-WS  :   [ \t]+ -> skip ;
+
+TRUE:           'true' ;
+FALSE:          'false' ;
+STRLIT:         '->' ((~[->])* | '->->') '->' ;
+
+
+fragment VALID_ID_START:    ('a' .. 'z') | ('A' .. 'Z') | '_' ;
+fragment VALID_ID_CHAR:     VALID_ID_START | ('0' .. '9') ;
+fragment INTEGER:           'Green' ;
+fragment DOUBLE:            'Darkgreen' ;
+fragment BOOLEAN:           'Brown' ;
+fragment STRING:            'Purple' ;
+
+
+OTHER
+ : .
+ ;

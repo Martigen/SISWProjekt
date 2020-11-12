@@ -47,9 +47,9 @@ public class Colorful {
 
     public static void main(String[] args) throws Exception {
 
-        CharStream in = CharStreams.fromFileName("./Colorful.txt");
+        CharStream in = CharStreams.fromFileName("./colorful.txt");
         ColorfulLexer lexer = new ColorfulLexer(in);
         ColorfulParser parser = new ColorfulParser(new CommonTokenStream(lexer));
-        new MyColofrulVisitor().visit(parser.prog());
+        new MyColorfulVisitor().visit(parser.parse());
     }
 }

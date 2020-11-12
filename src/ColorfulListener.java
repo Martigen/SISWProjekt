@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -7,205 +7,255 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface ColorfulListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link ColorfulParser#prog}.
+	 * Enter a parse tree produced by {@link ColorfulParser#parse}.
 	 * @param ctx the parse tree
 	 */
-	void enterProg(ColorfulParser.ProgContext ctx);
+	void enterParse(ColorfulParser.ParseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorfulParser#prog}.
+	 * Exit a parse tree produced by {@link ColorfulParser#parse}.
 	 * @param ctx the parse tree
 	 */
-	void exitProg(ColorfulParser.ProgContext ctx);
+	void exitParse(ColorfulParser.ParseContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code printExpr}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrintExpr(ColorfulParser.PrintExprContext ctx);
+	void enterBlock(ColorfulParser.BlockContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code printExpr}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrintExpr(ColorfulParser.PrintExprContext ctx);
+	void exitBlock(ColorfulParser.BlockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code assign}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssign(ColorfulParser.AssignContext ctx);
+	void enterStat(ColorfulParser.StatContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code assign}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#stat}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssign(ColorfulParser.AssignContext ctx);
+	void exitStat(ColorfulParser.StatContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code whileLoop}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#reserveMemoryForVariable}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileLoop(ColorfulParser.WhileLoopContext ctx);
+	void enterReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code whileLoop}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#reserveMemoryForVariable}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileLoop(ColorfulParser.WhileLoopContext ctx);
+	void exitReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code relat}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterRelat(ColorfulParser.RelatContext ctx);
+	void enterAssignment(ColorfulParser.AssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code relat}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitRelat(ColorfulParser.RelatContext ctx);
+	void exitAssignment(ColorfulParser.AssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code output}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#operateOnDeclaredVariable}.
 	 * @param ctx the parse tree
 	 */
-	void enterOutput(ColorfulParser.OutputContext ctx);
+	void enterOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code output}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#operateOnDeclaredVariable}.
 	 * @param ctx the parse tree
 	 */
-	void exitOutput(ColorfulParser.OutputContext ctx);
+	void exitOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code input}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#if_stat}.
 	 * @param ctx the parse tree
 	 */
-	void enterInput(ColorfulParser.InputContext ctx);
+	void enterIf_stat(ColorfulParser.If_statContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code input}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#if_stat}.
 	 * @param ctx the parse tree
 	 */
-	void exitInput(ColorfulParser.InputContext ctx);
+	void exitIf_stat(ColorfulParser.If_statContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code blank}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Enter a parse tree produced by {@link ColorfulParser#condition_block}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlank(ColorfulParser.BlankContext ctx);
+	void enterCondition_block(ColorfulParser.Condition_blockContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code blank}
-	 * labeled alternative in {@link ColorfulParser#stat}.
+	 * Exit a parse tree produced by {@link ColorfulParser#condition_block}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlank(ColorfulParser.BlankContext ctx);
+	void exitCondition_block(ColorfulParser.Condition_blockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code out}
-	 * labeled alternative in {@link ColorfulParser#black}.
+	 * Enter a parse tree produced by {@link ColorfulParser#stat_block}.
 	 * @param ctx the parse tree
 	 */
-	void enterOut(ColorfulParser.OutContext ctx);
+	void enterStat_block(ColorfulParser.Stat_blockContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code out}
-	 * labeled alternative in {@link ColorfulParser#black}.
+	 * Exit a parse tree produced by {@link ColorfulParser#stat_block}.
 	 * @param ctx the parse tree
 	 */
-	void exitOut(ColorfulParser.OutContext ctx);
+	void exitStat_block(ColorfulParser.Stat_blockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code in}
-	 * labeled alternative in {@link ColorfulParser#white}.
+	 * Enter a parse tree produced by {@link ColorfulParser#while_stat}.
 	 * @param ctx the parse tree
 	 */
-	void enterIn(ColorfulParser.InContext ctx);
+	void enterWhile_stat(ColorfulParser.While_statContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code in}
-	 * labeled alternative in {@link ColorfulParser#white}.
+	 * Exit a parse tree produced by {@link ColorfulParser#while_stat}.
 	 * @param ctx the parse tree
 	 */
-	void exitIn(ColorfulParser.InContext ctx);
+	void exitWhile_stat(ColorfulParser.While_statContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code parens}
+	 * Enter a parse tree produced by {@link ColorfulParser#blackValue}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlackValue(ColorfulParser.BlackValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#blackValue}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlackValue(ColorfulParser.BlackValueContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorfulParser#blackExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlackExpression(ColorfulParser.BlackExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#blackExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterParens(ColorfulParser.ParensContext ctx);
+	void enterMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code parens}
+	 * Exit a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitParens(ColorfulParser.ParensContext ctx);
+	void exitMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code MulDiv}
+	 * Enter a parse tree produced by the {@code atomExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterMulDiv(ColorfulParser.MulDivContext ctx);
+	void enterAtomExpr(ColorfulParser.AtomExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code MulDiv}
+	 * Exit a parse tree produced by the {@code atomExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitMulDiv(ColorfulParser.MulDivContext ctx);
+	void exitAtomExpr(ColorfulParser.AtomExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code AddSub}
+	 * Enter a parse tree produced by the {@code additiveExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddSub(ColorfulParser.AddSubContext ctx);
+	void enterAdditiveExpr(ColorfulParser.AdditiveExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code AddSub}
+	 * Exit a parse tree produced by the {@code additiveExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddSub(ColorfulParser.AddSubContext ctx);
+	void exitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code id}
+	 * Enter a parse tree produced by the {@code relationalExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterId(ColorfulParser.IdContext ctx);
+	void enterRelationalExpr(ColorfulParser.RelationalExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code id}
+	 * Exit a parse tree produced by the {@code relationalExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitId(ColorfulParser.IdContext ctx);
+	void exitRelationalExpr(ColorfulParser.RelationalExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code int}
+	 * Enter a parse tree produced by the {@code equalityExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterInt(ColorfulParser.IntContext ctx);
+	void enterEqualityExpr(ColorfulParser.EqualityExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code int}
+	 * Exit a parse tree produced by the {@code equalityExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitInt(ColorfulParser.IntContext ctx);
+	void exitEqualityExpr(ColorfulParser.EqualityExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code GreaterEqual}
-	 * labeled alternative in {@link ColorfulParser#relational}.
+	 * Enter a parse tree produced by the {@code parExpr}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void enterGreaterEqual(ColorfulParser.GreaterEqualContext ctx);
+	void enterParExpr(ColorfulParser.ParExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code GreaterEqual}
-	 * labeled alternative in {@link ColorfulParser#relational}.
+	 * Exit a parse tree produced by the {@code parExpr}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void exitGreaterEqual(ColorfulParser.GreaterEqualContext ctx);
+	void exitParExpr(ColorfulParser.ParExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code while}
-	 * labeled alternative in {@link ColorfulParser#loop}.
+	 * Enter a parse tree produced by the {@code integerAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhile(ColorfulParser.WhileContext ctx);
+	void enterIntegerAtom(ColorfulParser.IntegerAtomContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code while}
-	 * labeled alternative in {@link ColorfulParser#loop}.
+	 * Exit a parse tree produced by the {@code integerAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhile(ColorfulParser.WhileContext ctx);
+	void exitIntegerAtom(ColorfulParser.IntegerAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code doubleAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoubleAtom(ColorfulParser.DoubleAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code doubleAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoubleAtom(ColorfulParser.DoubleAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code booleanAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void enterBooleanAtom(ColorfulParser.BooleanAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code booleanAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void exitBooleanAtom(ColorfulParser.BooleanAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code idAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdAtom(ColorfulParser.IdAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code idAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdAtom(ColorfulParser.IdAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code stringAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringAtom(ColorfulParser.StringAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code stringAtom}
+	 * labeled alternative in {@link ColorfulParser#atom}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringAtom(ColorfulParser.StringAtomContext ctx);
 }

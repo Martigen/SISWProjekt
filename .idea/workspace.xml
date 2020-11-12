@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Colorful.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Colorful.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/colorful.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colorful.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Colorful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" afterDir="false" />
@@ -20,9 +41,8 @@
       <change beforePath="$PROJECT_DIR$/src/ColorfulListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyColofrulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColofrulVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyColofrulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyColorfulVisitor.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,10 +61,16 @@
   </component>
   <component name="ProjectId" id="1jJxvlSxK4ZvS3XRr7igvJW42o8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -53,29 +79,29 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="D:\Szkola\Semestr_9\SISW\Projekt" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Colorful" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Szkola\Semestr_9\SISW\Projekt" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Colorful" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Colorful" />
       <module name="Colorful" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,6 +112,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -101,23 +128,102 @@
       <workItem from="1603562651679" duration="756000" />
       <workItem from="1603563690734" duration="22000" />
       <workItem from="1603616268171" duration="1324000" />
+      <workItem from="1604856734804" duration="115000" />
+      <workItem from="1604856859625" duration="903000" />
+      <workItem from="1604857780483" duration="2596000" />
+      <workItem from="1604860426172" duration="18856000" />
+      <workItem from="1604911610585" duration="981000" />
+      <workItem from="1604912602968" duration="47323000" />
+      <workItem from="1605016445299" duration="15789000" />
+      <workItem from="1605092767541" duration="354000" />
+      <workItem from="1605114144895" duration="1396000" />
+      <workItem from="1605198620059" duration="2494000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1052" y="244" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1605052270357">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="1052" y="244" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/66.27.1854.957@66.27.1854.957" timestamp="1605052270357" />
+    <state x="726" y="254" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605051050022">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="726" y="254" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/66.27.1854.957@66.27.1854.957" timestamp="1605051050022" />
+    <state x="726" y="254" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1604924216484">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="726" y="254" width="524" height="509" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/66.27.1854.957@66.27.1854.957" timestamp="1604924216484" />
+    <state x="771" y="267" width="735" height="491" key="FileChooserDialogImpl" timestamp="1604918537858">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="771" y="267" width="735" height="491" key="FileChooserDialogImpl/66.27.1854.957@66.27.1854.957" timestamp="1604918537858" />
+    <state width="1810" height="244" key="GridCell.Tab.0.bottom" timestamp="1605200752722">
+      <screen x="64" y="27" width="1856" height="957" />
+    </state>
+    <state width="1810" height="244" key="GridCell.Tab.0.bottom/64.27.1856.957@64.27.1856.957" timestamp="1605200752722" />
+    <state width="1808" height="302" key="GridCell.Tab.0.bottom/66.27.1854.957@66.27.1854.957" timestamp="1605053867690" />
+    <state width="1810" height="244" key="GridCell.Tab.0.center" timestamp="1605200752720">
+      <screen x="64" y="27" width="1856" height="957" />
+    </state>
+    <state width="1810" height="244" key="GridCell.Tab.0.center/64.27.1856.957@64.27.1856.957" timestamp="1605200752720" />
+    <state width="1808" height="302" key="GridCell.Tab.0.center/66.27.1854.957@66.27.1854.957" timestamp="1605053867689" />
+    <state width="1810" height="244" key="GridCell.Tab.0.left" timestamp="1605200752719">
+      <screen x="64" y="27" width="1856" height="957" />
+    </state>
+    <state width="1810" height="244" key="GridCell.Tab.0.left/64.27.1856.957@64.27.1856.957" timestamp="1605200752719" />
+    <state width="1808" height="302" key="GridCell.Tab.0.left/66.27.1854.957@66.27.1854.957" timestamp="1605053867689" />
+    <state width="1810" height="244" key="GridCell.Tab.0.right" timestamp="1605200752721">
+      <screen x="64" y="27" width="1856" height="957" />
+    </state>
+    <state width="1810" height="244" key="GridCell.Tab.0.right/64.27.1856.957@64.27.1856.957" timestamp="1605200752721" />
+    <state width="1808" height="302" key="GridCell.Tab.0.right/66.27.1854.957@66.27.1854.957" timestamp="1605053867690" />
+    <state width="1808" height="302" key="GridCell.Tab.1.bottom" timestamp="1605053867694">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state width="1808" height="302" key="GridCell.Tab.1.bottom/66.27.1854.957@66.27.1854.957" timestamp="1605053867694" />
+    <state width="1808" height="302" key="GridCell.Tab.1.center" timestamp="1605053867693">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state width="1808" height="302" key="GridCell.Tab.1.center/66.27.1854.957@66.27.1854.957" timestamp="1605053867693" />
+    <state width="1808" height="302" key="GridCell.Tab.1.left" timestamp="1605053867691">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state width="1808" height="302" key="GridCell.Tab.1.left/66.27.1854.957@66.27.1854.957" timestamp="1605053867691" />
+    <state width="1808" height="302" key="GridCell.Tab.1.right" timestamp="1605053867694">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state width="1808" height="302" key="GridCell.Tab.1.right/66.27.1854.957@66.27.1854.957" timestamp="1605053867694" />
+    <state x="482" y="140" width="1022" height="737" key="SettingsEditor" timestamp="1604961442053">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="482" y="140" width="1022" height="737" key="SettingsEditor/66.27.1854.957@66.27.1854.957" timestamp="1604961442053" />
+    <state x="743" y="262" width="524" height="496" key="extract.method.dialog" timestamp="1604929283818">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="743" y="262" width="524" height="496" key="extract.method.dialog/66.27.1854.957@66.27.1854.957" timestamp="1604929283818" />
+    <state x="772" y="263" width="432" height="492" key="refactoring.ChangeSignatureDialog" timestamp="1604924341707">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="772" y="263" width="432" height="492" key="refactoring.ChangeSignatureDialog/66.27.1854.957@66.27.1854.957" timestamp="1604924341707" />
+    <state x="657" y="228" key="run.anything.popup" timestamp="1605043719770">
+      <screen x="66" y="27" width="1854" height="957" />
+    </state>
+    <state x="657" y="228" key="run.anything.popup/66.27.1854.957@66.27.1854.957" timestamp="1605043719770" />
   </component>
 </project>

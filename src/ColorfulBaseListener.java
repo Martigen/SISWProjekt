@@ -1,4 +1,4 @@
-// Generated from D:/Szkola/Semestr_9/SISW/SISWProjekt\Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -15,205 +15,277 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProg(ColorfulParser.ProgContext ctx) { }
+	@Override public void enterParse(ColorfulParser.ParseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProg(ColorfulParser.ProgContext ctx) { }
+	@Override public void exitParse(ColorfulParser.ParseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintExpr(ColorfulParser.PrintExprContext ctx) { }
+	@Override public void enterBlock(ColorfulParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintExpr(ColorfulParser.PrintExprContext ctx) { }
+	@Override public void exitBlock(ColorfulParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssign(ColorfulParser.AssignContext ctx) { }
+	@Override public void enterStat(ColorfulParser.StatContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssign(ColorfulParser.AssignContext ctx) { }
+	@Override public void exitStat(ColorfulParser.StatContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileLoop(ColorfulParser.WhileLoopContext ctx) { }
+	@Override public void enterReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileLoop(ColorfulParser.WhileLoopContext ctx) { }
+	@Override public void exitReserveMemoryForVariable(ColorfulParser.ReserveMemoryForVariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRelat(ColorfulParser.RelatContext ctx) { }
+	@Override public void enterAssignment(ColorfulParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRelat(ColorfulParser.RelatContext ctx) { }
+	@Override public void exitAssignment(ColorfulParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOutput(ColorfulParser.OutputContext ctx) { }
+	@Override public void enterOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOutput(ColorfulParser.OutputContext ctx) { }
+	@Override public void exitOperateOnDeclaredVariable(ColorfulParser.OperateOnDeclaredVariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInput(ColorfulParser.InputContext ctx) { }
+	@Override public void enterIf_stat(ColorfulParser.If_statContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInput(ColorfulParser.InputContext ctx) { }
+	@Override public void exitIf_stat(ColorfulParser.If_statContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlank(ColorfulParser.BlankContext ctx) { }
+	@Override public void enterCondition_block(ColorfulParser.Condition_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlank(ColorfulParser.BlankContext ctx) { }
+	@Override public void exitCondition_block(ColorfulParser.Condition_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOut(ColorfulParser.OutContext ctx) { }
+	@Override public void enterStat_block(ColorfulParser.Stat_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOut(ColorfulParser.OutContext ctx) { }
+	@Override public void exitStat_block(ColorfulParser.Stat_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIn(ColorfulParser.InContext ctx) { }
+	@Override public void enterWhile_stat(ColorfulParser.While_statContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIn(ColorfulParser.InContext ctx) { }
+	@Override public void exitWhile_stat(ColorfulParser.While_statContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParens(ColorfulParser.ParensContext ctx) { }
+	@Override public void enterBlackValue(ColorfulParser.BlackValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParens(ColorfulParser.ParensContext ctx) { }
+	@Override public void exitBlackValue(ColorfulParser.BlackValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMulDiv(ColorfulParser.MulDivContext ctx) { }
+	@Override public void enterBlackExpression(ColorfulParser.BlackExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMulDiv(ColorfulParser.MulDivContext ctx) { }
+	@Override public void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddSub(ColorfulParser.AddSubContext ctx) { }
+	@Override public void enterMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddSub(ColorfulParser.AddSubContext ctx) { }
+	@Override public void exitMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterId(ColorfulParser.IdContext ctx) { }
+	@Override public void enterAtomExpr(ColorfulParser.AtomExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitId(ColorfulParser.IdContext ctx) { }
+	@Override public void exitAtomExpr(ColorfulParser.AtomExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInt(ColorfulParser.IntContext ctx) { }
+	@Override public void enterAdditiveExpr(ColorfulParser.AdditiveExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInt(ColorfulParser.IntContext ctx) { }
+	@Override public void exitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterGreaterEqual(ColorfulParser.GreaterEqualContext ctx) { }
+	@Override public void enterRelationalExpr(ColorfulParser.RelationalExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitGreaterEqual(ColorfulParser.GreaterEqualContext ctx) { }
+	@Override public void exitRelationalExpr(ColorfulParser.RelationalExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhile(ColorfulParser.WhileContext ctx) { }
+	@Override public void enterEqualityExpr(ColorfulParser.EqualityExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhile(ColorfulParser.WhileContext ctx) { }
+	@Override public void exitEqualityExpr(ColorfulParser.EqualityExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParExpr(ColorfulParser.ParExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParExpr(ColorfulParser.ParExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIntegerAtom(ColorfulParser.IntegerAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIntegerAtom(ColorfulParser.IntegerAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDoubleAtom(ColorfulParser.DoubleAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDoubleAtom(ColorfulParser.DoubleAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBooleanAtom(ColorfulParser.BooleanAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBooleanAtom(ColorfulParser.BooleanAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdAtom(ColorfulParser.IdAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdAtom(ColorfulParser.IdAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStringAtom(ColorfulParser.StringAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStringAtom(ColorfulParser.StringAtomContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

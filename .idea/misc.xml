@@ -26,7 +26,17 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/Colorful.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="D:\Szkola\Semestr_9\SISW\SISWProjekt\src" />
+          <option name="outputDir" value="$PROJECT_DIR$/src" />
+          <option name="libDir" value="" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="" />
+          <option name="generateVisitor" value="true" />
+        </PerGrammarGenerationSettings>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/Colorful_new.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="$PROJECT_DIR$/out" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />
