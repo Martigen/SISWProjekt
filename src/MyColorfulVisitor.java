@@ -145,7 +145,7 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         } else if (left instanceof Integer && right instanceof String) {
             return this.stringMultiplyDivide(ctx.op.getType(), right, left);
         } else if (left instanceof Boolean && right instanceof Boolean) {
-            if (ctx.op.getType() == ColorfulParser.ADD) {
+            if (ctx.op.getType() == ColorfulParser.MUL) {
                 return (Boolean) left && (Boolean) right;
             } else {
                 return !((Boolean) left && (Boolean) right);
