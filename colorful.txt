@@ -44,3 +44,30 @@ Darkgreen powered mix double1 aqua double2
 Black ->->
 Black double1
 Black powered
+
+
+Black ->->
+
+Darkgreen darkgreenA mix 64.0
+Darkgreen darkgreenB mix 4.0
+Green greenA mix 4
+
+Black darkgreenA auburn
+
+Black ->->
+Green greenMod mix 1343 magenta greenA
+Black greenMod
+
+Black ->->
+Darkgreen dgMod mix darkgreenA magenta 34.51
+Black dgMod
+Black (dgMod pink 100) orange 100.0
+
+
+Black ->->
+Green gNewNew mix 8
+Green gFactorial mix gNewNew capri
+Black gFactorial
+
+Black ->->
+Black 4 capri

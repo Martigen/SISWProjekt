@@ -162,14 +162,76 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         Object right = this.visit(ctx.expr(1));
 
         if (left instanceof Double && right instanceof Double) {
-            //if (ctx.op.getType() == ColorfulParser.PWR) {
-                return Math.pow((Double) left, (Double) right);
-            //}
-        } else {
-            throw new ArithmeticException("Two parameters of power method have to be type Darkgreen!");
+            return Math.pow((Double) left, (Double) right);
+        }
+        else if (left instanceof Integer && right instanceof Integer) {
+            return Math.pow((Integer) left, (Integer) right);
+        }
+        else if (left instanceof Integer && right instanceof Double) {
+            return Math.pow((Integer) left, (Double) right);
+        }
+        else if (left instanceof Double && right instanceof Integer) {
+            return Math.pow((Double) left, (Integer) right);
+        }
+        else {
+            throw new ArithmeticException("Parameters of power method have to be type Darkgreen or Green!");
         }
     }
 
+
+    @Override
+    public Object visitModExpr(ColorfulParser.ModExprContext ctx) {
+        Object left = this.visit(ctx.expr(0));
+        Object right = this.visit(ctx.expr(1));
+
+        if (left instanceof Double && right instanceof Double) {
+            return (Double) left % (Double) right;
+        }
+        else if (left instanceof Integer && right instanceof Integer) {
+            return (Integer) left % (Integer) right;
+        }
+        else if (left instanceof Integer && right instanceof Double) {
+            return (Integer) left % (Double) right;
+        }
+        else if (left instanceof Double && right instanceof Integer) {
+            return (Double) left % (Integer) right;
+        }
+        else {
+            throw new ArithmeticException("Parameters of modulo method have to be type Darkgreen or Green!");
+        }
+    }
+
+    @Override
+    public Object visitSqrtExpr(ColorfulParser.SqrtExprContext ctx) {
+        Object left = this.visit(ctx.expr());
+
+        if (left instanceof Double) {
+            return Math.sqrt((Double) left);
+        }
+        else if (left instanceof Integer) {
+            return Math.sqrt((Integer) left);
+        }
+        else {
+            throw new ArithmeticException("Parameter of square root method has to be type Darkgreen or Green!");
+        }
+    }
+
+    @Override
+    public Object visitFactorialExpr(ColorfulParser.FactorialExprContext ctx) {
+        Object left = this.visit(ctx.expr());
+
+        if (left instanceof Integer) {
+            if ((Integer) left > 0) {
+                return factorial((Integer) left);
+            }
+            else {
+                throw new ArithmeticException("Factorial parameter has to be greater than 0!");
+            }
+        }
+        else {
+            throw new ArithmeticException("Factorial parameter has to be type Green!");
+        }
+    }
 
     @Override
     public Object visitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx) {
@@ -395,5 +457,11 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         }
 
         return newString.toString();
+    }
+
+
+    private Integer factorial(Integer i) {
+        if (i == 0) return 1;
+        else return i * factorial(i - 1);
     }
 }

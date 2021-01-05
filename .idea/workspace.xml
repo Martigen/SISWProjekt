@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="">
+    <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="Added power operator to power double by double.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Colorful.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/colorful.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colorful.txt" afterDir="false" />
@@ -91,6 +91,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Colorful" />
@@ -127,7 +138,7 @@
       <workItem from="1605273253093" duration="2046000" />
       <workItem from="1609855452081" duration="254000" />
       <workItem from="1609855716873" duration="1541000" />
-      <workItem from="1609857273506" duration="640000" />
+      <workItem from="1609857273506" duration="3226000" />
     </task>
     <task id="LOCAL-00001" summary="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more.">
       <created>1605201220408</created>
@@ -150,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605203473136</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added power operator to power double by double.">
+      <created>1609857954290</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609857954290</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +190,7 @@
     <MESSAGE value="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more." />
     <MESSAGE value="TODO deleted." />
     <MESSAGE value="Deleted unused methods from Visitor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted unused methods from Visitor." />
+    <MESSAGE value="Added power operator to power double by double." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added power operator to power double by double." />
   </component>
 </project>

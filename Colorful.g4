@@ -56,6 +56,9 @@ block
 
  expr:              expr op=(MUL | DIV) expr                                #multiplicationExpr
         |           expr op=PWR expr                                        #pwrExpr
+        |           expr op=SQRT                                            #sqrtExpr
+        |           expr op=FACTORIAL                                       #factorialExpr
+        |           expr op=MOD expr                                        #modExpr
         |           expr op=(ADD | SUB) expr                                #additiveExpr
         |           expr op=(GREATER|LESS|GREATER_EQ|LESS_EQ) expr          #relationalExpr
         |           expr op=(EQ | NEQ) expr                                 #equalityExpr
@@ -92,6 +95,9 @@ DIV :           'orange';
 ADD :           'red';
 SUB :           'blue';
 PWR :           'aqua';
+SQRT :          'auburn';
+MOD :           'magenta';
+FACTORIAL :     'capri';
 
 
 ASSIGN :        'mix';

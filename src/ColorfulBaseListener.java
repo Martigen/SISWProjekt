@@ -171,6 +171,30 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterModExpr(ColorfulParser.ModExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitModExpr(ColorfulParser.ModExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSqrtExpr(ColorfulParser.SqrtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSqrtExpr(ColorfulParser.SqrtExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMultiplicationExpr(ColorfulParser.MultiplicationExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -214,6 +238,18 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitRelationalExpr(ColorfulParser.RelationalExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFactorialExpr(ColorfulParser.FactorialExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFactorialExpr(ColorfulParser.FactorialExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -89,6 +89,20 @@ public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPwrExpr(ColorfulParser.PwrExprContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code modExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitModExpr(ColorfulParser.ModExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code sqrtExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSqrtExpr(ColorfulParser.SqrtExprContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
@@ -116,6 +130,13 @@ public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitRelationalExpr(ColorfulParser.RelationalExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code factorialExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFactorialExpr(ColorfulParser.FactorialExprContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code equalityExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.

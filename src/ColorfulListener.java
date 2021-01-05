@@ -139,6 +139,30 @@ public interface ColorfulListener extends ParseTreeListener {
 	 */
 	void exitPwrExpr(ColorfulParser.PwrExprContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code modExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterModExpr(ColorfulParser.ModExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code modExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitModExpr(ColorfulParser.ModExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code sqrtExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterSqrtExpr(ColorfulParser.SqrtExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code sqrtExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitSqrtExpr(ColorfulParser.SqrtExprContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
 	 * @param ctx the parse tree
@@ -186,6 +210,18 @@ public interface ColorfulListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitRelationalExpr(ColorfulParser.RelationalExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code factorialExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactorialExpr(ColorfulParser.FactorialExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code factorialExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactorialExpr(ColorfulParser.FactorialExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code equalityExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
