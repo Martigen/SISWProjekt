@@ -1,4 +1,4 @@
-// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -154,6 +154,18 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPwrExpr(ColorfulParser.PwrExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPwrExpr(ColorfulParser.PwrExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

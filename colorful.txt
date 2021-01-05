@@ -9,8 +9,8 @@ Purple str1 mix ->10-> pink -2
 Black str1
 
 
-# Brown bool mix true~
-Brown bool mix false~
+Brown bool mix true~
+# Brown bool mix false~
 
 Green n mix 0
 transparent bool light
@@ -24,3 +24,23 @@ dark
 
 Purple emptyStr mix ->->
 Black emptyStr
+
+
+
+gold bool indigo true light
+    n mix n red 1
+    Black n
+    transparent n indigo 20 light
+        bool mix false
+    dark
+dark
+
+
+Darkgreen double1 mix 2.0
+Darkgreen double2 mix 10.0
+
+Darkgreen powered mix double1 aqua double2
+
+Black ->->
+Black double1
+Black powered

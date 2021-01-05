@@ -55,6 +55,7 @@ block
   ;
 
  expr:              expr op=(MUL | DIV) expr                                #multiplicationExpr
+        |           expr op=PWR expr                                        #pwrExpr
         |           expr op=(ADD | SUB) expr                                #additiveExpr
         |           expr op=(GREATER|LESS|GREATER_EQ|LESS_EQ) expr          #relationalExpr
         |           expr op=(EQ | NEQ) expr                                 #equalityExpr
@@ -90,6 +91,7 @@ MUL :           'pink';
 DIV :           'orange';
 ADD :           'red';
 SUB :           'blue';
+PWR :           'aqua';
 
 
 ASSIGN :        'mix';

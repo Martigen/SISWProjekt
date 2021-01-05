@@ -157,6 +157,21 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
 
 
     @Override
+    public Object visitPwrExpr(ColorfulParser.PwrExprContext ctx) {
+        Object left = this.visit(ctx.expr(0));
+        Object right = this.visit(ctx.expr(1));
+
+        if (left instanceof Double && right instanceof Double) {
+            //if (ctx.op.getType() == ColorfulParser.PWR) {
+                return Math.pow((Double) left, (Double) right);
+            //}
+        } else {
+            throw new ArithmeticException("Two parameters of power method have to be type Darkgreen!");
+        }
+    }
+
+
+    @Override
     public Object visitAdditiveExpr(ColorfulParser.AdditiveExprContext ctx) {
         Object left = super.visit(ctx.expr(0));
         Object right = super.visit(ctx.expr(1));

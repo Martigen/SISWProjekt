@@ -1,4 +1,4 @@
-// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.8
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -126,6 +126,18 @@ public interface ColorfulListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code pwrExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterPwrExpr(ColorfulParser.PwrExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code pwrExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitPwrExpr(ColorfulParser.PwrExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
