@@ -1,73 +1,16 @@
-Darkgreen dg
-dg mix 10.0
-Black dg
+Black ->Podaj liczbe: ->
+# Green greenMod mix Green white
+# white Green
+# Black white Green
+#Black ->greenmode->
+Green x
+x mix White Green
+Black x ~
 
-Darkgreen dg2 mix 20.0
-Black dg2 #output dg2
+Darkgreen m mix 5.0
+Darkgreen i mix 0.0
+Darkgreen plus mix 1.0
 
-Purple str1 mix ->10-> pink -2
-Black str1
-
-
-Brown bool mix true~
-# Brown bool mix false~
-
-Green n mix 0
-transparent bool light
-    transparent n > 0 Black ->n jest wieksze od 0->
-    violet transparent n indigo 0 Black ->n rowna sie 0->
-    violet Black ->n jest mniejsze od 0->
-dark violet light
-    Black ->bool jest false wiec if nie zadziala->
+silver i transparent i<m plus light
+    Black->jestem double!->
 dark
-
-
-Purple emptyStr mix ->->
-Black emptyStr
-
-
-
-gold bool indigo true light
-    n mix n red 1
-    Black n
-    transparent n indigo 20 light
-        bool mix false
-    dark
-dark
-
-
-Darkgreen double1 mix 2.0
-Darkgreen double2 mix 10.0
-
-Darkgreen powered mix double1 aqua double2
-
-Black ->->
-Black double1
-Black powered
-
-
-Black ->->
-
-Darkgreen darkgreenA mix 64.0
-Darkgreen darkgreenB mix 4.0
-Green greenA mix 4
-
-Black darkgreenA auburn
-
-Black ->->
-Green greenMod mix 1343 magenta greenA
-Black greenMod
-
-Black ->->
-Darkgreen dgMod mix darkgreenA magenta 34.51
-Black dgMod
-Black (dgMod pink 100) orange 100.0
-
-
-Black ->->
-Green gNewNew mix 8
-Green gFactorial mix gNewNew capri
-Black gFactorial
-
-Black ->->
-Black 4 capri

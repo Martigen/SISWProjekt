@@ -1,4 +1,4 @@
-// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
+// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -107,6 +107,16 @@ public interface ColorfulListener extends ParseTreeListener {
 	 */
 	void exitWhile_stat(ColorfulParser.While_statContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ColorfulParser#fore_stat}.
+	 * @param ctx the parse tree
+	 */
+	void enterFore_stat(ColorfulParser.Fore_statContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#fore_stat}.
+	 * @param ctx the parse tree
+	 */
+	void exitFore_stat(ColorfulParser.Fore_statContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ColorfulParser#blackValue}.
 	 * @param ctx the parse tree
 	 */
@@ -126,6 +136,16 @@ public interface ColorfulListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhiteValue(ColorfulParser.WhiteValueContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code pwrExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.
@@ -162,6 +182,18 @@ public interface ColorfulListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSqrtExpr(ColorfulParser.SqrtExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code inputExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterInputExpr(ColorfulParser.InputExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code inputExpr}
+	 * labeled alternative in {@link ColorfulParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitInputExpr(ColorfulParser.InputExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code multiplicationExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.

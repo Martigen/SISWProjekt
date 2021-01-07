@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="Added power operator to power double by double.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Colorful.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Colorful.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/colorful.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colorful.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" afterDir="false" />
@@ -66,7 +68,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/antlr-4.9-complete.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -87,17 +89,6 @@
     <configuration name="Colorful" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Colorful" />
       <module name="Colorful" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,6 +130,7 @@
       <workItem from="1609855452081" duration="254000" />
       <workItem from="1609855716873" duration="1541000" />
       <workItem from="1609857273506" duration="3226000" />
+      <workItem from="1610042721886" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="New features, if-else, nested if, data types, comparing, type checking, memory reserving for undeclared var, much more.">
       <created>1605201220408</created>

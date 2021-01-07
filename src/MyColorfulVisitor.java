@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
     // dla porownania zmiennoprzecinkowych wartosci
@@ -417,7 +418,79 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
 
         return null;
     }
+    @Override
+    public Object visitFore_stat(ColorfulParser.Fore_statContext ctx) {
 
+        String opr = ctx.op.getText();
+
+        Object n = this.visit(ctx.expr(2));
+        Object i;
+        if(this.visit(ctx.expr(2)) instanceof Integer)
+        {
+            if(opr.equals(">"))
+            {
+                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i > (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals("<"))
+            {
+                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i < (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals(">="))
+            {
+                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i >= (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals("<="))
+            {
+                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i <= (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+        }
+        else if(this.visit(ctx.expr(2)) instanceof Double)
+        {
+            if(opr.equals(">"))
+            {
+                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i > (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals("<"))
+            {
+                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i < (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals(">="))
+            {
+                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i >= (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+            else if(opr.equals("<="))
+            {
+                for( i =(Double) this.visit(ctx.expr(0)) ; (Double) i <= (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
+                {
+                    this.visit(ctx.stat_block());
+                }
+            }
+        }
+
+        return null;
+
+    }
 
     @Override
     public Object visitBlackValue(ColorfulParser.BlackValueContext ctx) {
@@ -433,6 +506,75 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         return null;
     }
 
+    @Override
+    public Object visitInputExpr(ColorfulParser.InputExprContext ctx) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        if(memory.containsKey(ctx.parent.getChild(0).getText()))
+        {
+            if(ctx.whiteValue().TYPE().getText().equals("Green"))
+            {
+                int xx  = scanner.nextInt();
+                memory.put(ctx.parent.getChild(0).getText(), xx);
+                return xx;
+            }
+            else if(ctx.whiteValue().TYPE().getText().equals("Darkgreen"))
+            {
+                double xx  = scanner.nextDouble();
+                memory.put(ctx.parent.getChild(0).getText(), xx);
+                return xx;
+            }
+            else if(ctx.whiteValue().TYPE().getText().equals("Purple"))
+            {
+                String xx = scanner.nextLine();
+                memory.put(ctx.parent.getChild(0).getText(), xx);
+                return xx;
+            }
+            else
+            {
+                try {
+                    throw new Exception("This type is not supported!");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+        return null;
+    }
+
+    @Override
+    public Object visitWhiteValue(ColorfulParser.WhiteValueContext ctx) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        if(ctx.TYPE().getText().equals("Green"))
+        {
+            int xx  = scanner.nextInt();
+            return xx;
+        }
+        else if(ctx.TYPE().getText().equals("Darkgreen"))
+        {
+            double xx = scanner.nextDouble();
+            return xx;
+        }
+        else if(ctx.TYPE().getText().equals("Purple"))
+        {
+            String xx = scanner.nextLine();
+            return xx;
+        }
+        else
+        {
+            try {
+                throw new Exception("This type is not supported!");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
 
     private String stringMultiplyDivide(int type, Object left, Object right) {
         String leftWithoutQuotes = ((String) left);

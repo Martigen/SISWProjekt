@@ -15,8 +15,10 @@ block
   |         operateOnDeclaredVariable NEWLINE
   |         if_stat NEWLINE?
   |         while_stat NEWLINE?
+  |         fore_stat NEWLINE?
   |         blackValue NEWLINE
   |         blackExpression NEWLINE
+  |         whiteValue NEWLINE
   |         NEWLINE
 //  |         white NEWLINE
   |         OTHER {System.err.println("Unknown char: " + $OTHER.text);}
@@ -44,6 +46,7 @@ block
  while_stat: WHILE expr stat_block
   ;
 
+ fore_stat: FOR expr  (IF expr op=(GREATER | LESS | GREATER_EQ | LESS_EQ) expr)  expr  stat_block;
   // white: (type=TYPE | expr)
   //  ;
   //
@@ -54,6 +57,8 @@ block
  blackExpression: OUT expr
   ;
 
+  whiteValue: IN type=TYPE;
+
  expr:              expr op=(MUL | DIV) expr                                #multiplicationExpr
         |           expr op=PWR expr                                        #pwrExpr
         |           expr op=SQRT                                            #sqrtExpr
@@ -62,6 +67,7 @@ block
         |           expr op=(ADD | SUB) expr                                #additiveExpr
         |           expr op=(GREATER|LESS|GREATER_EQ|LESS_EQ) expr          #relationalExpr
         |           expr op=(EQ | NEQ) expr                                 #equalityExpr
+        |           whiteValue                                              #inputExpr
         |           atom                                                    #atomExpr
   ;
 
@@ -106,12 +112,13 @@ CPAR :          ')';
 OBRACE :        'light';
 CBRACE :        'dark';
 OUT:            'Black';
+IN:             'White';
 
 
 IF :            'transparent';
 ELSE :          'violet';
 WHILE :         'gold';
-
+FOR :           'silver';
 
 INT :           '-'? [0-9]+ ;
 DBL :           '-'? [0-9]+ '.' [0-9]*
