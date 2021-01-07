@@ -1,3 +1,4 @@
+import java.rmi.UnexpectedException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -418,79 +419,69 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
 
         return null;
     }
+
+
     @Override
     public Object visitFore_stat(ColorfulParser.Fore_statContext ctx) {
-
         String opr = ctx.op.getText();
-
         Object n = this.visit(ctx.expr(2));
         Object i;
-        if(this.visit(ctx.expr(2)) instanceof Integer)
-        {
-            if(opr.equals(">"))
-            {
-                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i > (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
-            else if(opr.equals("<"))
-            {
-                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i < (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
-            else if(opr.equals(">="))
-            {
-                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i >= (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
-            else if(opr.equals("<="))
-            {
-                for(  i =(Integer) this.visit(ctx.expr(0)) ; (Integer) i <= (Integer) n;  i = (Integer) i + (Integer) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
+
+        if (this.visit(ctx.expr(2)) instanceof Integer) {
+            switch (opr) {
+                case ">":
+                    for (i = (Integer) this.visit(ctx.expr(0)); (Integer) i > (Integer) n; i = (Integer) i + (Integer) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case "<":
+                    for (i = (Integer) this.visit(ctx.expr(0)); (Integer) i < (Integer) n; i = (Integer) i + (Integer) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case ">=":
+                    for (i = (Integer) this.visit(ctx.expr(0)); (Integer) i >= (Integer) n; i = (Integer) i + (Integer) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case "<=":
+                    for (i = (Integer) this.visit(ctx.expr(0)); (Integer) i <= (Integer) n; i = (Integer) i + (Integer) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
             }
         }
-        else if(this.visit(ctx.expr(2)) instanceof Double)
-        {
-            if(opr.equals(">"))
-            {
-                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i > (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
+        else if(this.visit(ctx.expr(2)) instanceof Double) {
+            switch (opr) {
+                case ">":
+                    for (i = (Double) this.visit(ctx.expr(0)); (Double) i > (Double) n; i = (Double) i + (Double) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case "<":
+                    for (i = (Double) this.visit(ctx.expr(0)); (Double) i < (Double) n; i = (Double) i + (Double) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case ">=":
+                    for (i = (Double) this.visit(ctx.expr(0)); (Double) i >= (Double) n; i = (Double) i + (Double) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
+                case "<=":
+                    for (i = (Double) this.visit(ctx.expr(0)); (Double) i <= (Double) n; i = (Double) i + (Double) this.visit(ctx.expr(3))) {
+                        this.visit(ctx.stat_block());
+                    }
+                    break;
             }
-            else if(opr.equals("<"))
-            {
-                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i < (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
-            else if(opr.equals(">="))
-            {
-                for(  i =(Double) this.visit(ctx.expr(0)) ; (Double) i >= (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
-            else if(opr.equals("<="))
-            {
-                for( i =(Double) this.visit(ctx.expr(0)) ; (Double) i <= (Double) n;  i = (Double) i + (Double) this.visit(ctx.expr(3)))
-                {
-                    this.visit(ctx.stat_block());
-                }
-            }
+        }
+        else {
+            throw new RuntimeException("Wrong data type provided!");
         }
 
         return null;
-
     }
+
 
     @Override
     public Object visitBlackValue(ColorfulParser.BlackValueContext ctx) {
@@ -499,6 +490,7 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         return null;
     }
 
+
     @Override
     public Object visitBlackExpression(ColorfulParser.BlackExpressionContext ctx) {
         Object value = super.visitBlackExpression(ctx);
@@ -506,75 +498,110 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
         return null;
     }
 
-    @Override
-    public Object visitInputExpr(ColorfulParser.InputExprContext ctx) {
 
+    @Override
+    public Object visitBlackInput(ColorfulParser.BlackInputContext ctx) {
         Scanner scanner = new Scanner(System.in);
 
-        if(memory.containsKey(ctx.parent.getChild(0).getText()))
-        {
-            if(ctx.whiteValue().TYPE().getText().equals("Green"))
-            {
-                int xx  = scanner.nextInt();
-                memory.put(ctx.parent.getChild(0).getText(), xx);
-                return xx;
+        switch (ctx.type.getText()) {
+            case "Green": {
+                Integer inputVar = scanner.nextInt();
+                System.out.println(inputVar);
+                return inputVar;
             }
-            else if(ctx.whiteValue().TYPE().getText().equals("Darkgreen"))
-            {
-                double xx  = scanner.nextDouble();
-                memory.put(ctx.parent.getChild(0).getText(), xx);
-                return xx;
+            case "Darkgreen": {
+                Double inputVar = scanner.nextDouble();
+                System.out.println(inputVar);
+                return inputVar;
             }
-            else if(ctx.whiteValue().TYPE().getText().equals("Purple"))
-            {
-                String xx = scanner.nextLine();
-                memory.put(ctx.parent.getChild(0).getText(), xx);
-                return xx;
+            case "Purple": {
+                String inputVar = scanner.nextLine();
+                System.out.println(inputVar);
+                return inputVar;
             }
-            else
-            {
-                try {
-                    throw new Exception("This type is not supported!");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            case "Brown": {
+                Boolean inputVar = scanner.nextBoolean();
+                System.out.println(inputVar);
+                return inputVar;
             }
+            default:
+                throw new RuntimeException("Wrong data type provided!");
         }
-
-
-        return null;
     }
 
     @Override
     public Object visitWhiteValue(ColorfulParser.WhiteValueContext ctx) {
-
         Scanner scanner = new Scanner(System.in);
+        String existingVariableName = ctx.parent.getParent().getChild(0).getText();
 
-        if(ctx.TYPE().getText().equals("Green"))
-        {
-            int xx  = scanner.nextInt();
-            return xx;
-        }
-        else if(ctx.TYPE().getText().equals("Darkgreen"))
-        {
-            double xx = scanner.nextDouble();
-            return xx;
-        }
-        else if(ctx.TYPE().getText().equals("Purple"))
-        {
-            String xx = scanner.nextLine();
-            return xx;
-        }
-        else
-        {
-            try {
-                throw new Exception("This type is not supported!");
-            } catch (Exception e) {
-                e.printStackTrace();
+        if (memory.containsKey(existingVariableName)) {
+            switch (ctx.TYPE().getText()) {
+                case "Green": {
+                    Integer inputVar = scanner.nextInt();
+                    memory.put(ctx.parent.getChild(0).getText(), inputVar);
+                    return inputVar;
+                }
+                case "Darkgreen": {
+                    Double inputVar = scanner.nextDouble();
+                    memory.put(ctx.parent.getChild(0).getText(), inputVar);
+                    return inputVar;
+                }
+                case "Purple": {
+                    String inputVar = scanner.nextLine();
+                    memory.put(ctx.parent.getChild(0).getText(), inputVar);
+                    return inputVar;
+                }
+                default:
+                    throw new RuntimeException("Wrong data type provided!");
             }
         }
-        return null;
+        else {
+            throw new RuntimeException("Trying to access undefined variable!");
+        }
     }
+
+
+    @Override
+    public Object visitAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx) {
+        Scanner scanner = new Scanner(System.in);
+        String newVariableName = ctx.varName.getText();
+
+        if (!memory.containsKey(newVariableName)) {
+            if (ctx.varType.getText().equals(ctx.type.getText())) {
+                switch (ctx.type.getText()) {
+                    case "Green": {
+                        Integer inputVar = scanner.nextInt();
+                        memory.put(ctx.varName.getText(), inputVar);
+                        return inputVar;
+                    }
+                    case "Darkgreen": {
+                        Double inputVar = scanner.nextDouble();
+                        memory.put(ctx.varName.getText(), inputVar);
+                        return inputVar;
+                    }
+                    case "Purple": {
+                        String inputVar = scanner.nextLine();
+                        memory.put(ctx.varName.getText(), inputVar);
+                        return inputVar;
+                    }
+                    case "Brown": {
+                        Boolean inputVar = scanner.nextBoolean();
+                        memory.put(ctx.varName.getText(), inputVar);
+                        return inputVar;
+                    }
+                    default:
+                        throw new RuntimeException("Wrong data type provided!");
+                }
+            }
+            else {
+                throw new RuntimeException("Input variable type must be same as declared variable type!");
+            }
+        }
+        else {
+            throw new RuntimeException("This variable is already defined!");
+        }
+    }
+
 
     private String stringMultiplyDivide(int type, Object left, Object right) {
         String leftWithoutQuotes = ((String) left);

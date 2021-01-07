@@ -1,4 +1,4 @@
-// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -23,15 +23,16 @@ public class ColorfulParser extends Parser {
 		COMMENT=33, WS=34, TRUE=35, FALSE=36, STRLIT=37, OTHER=38;
 	public static final int
 		RULE_parse = 0, RULE_block = 1, RULE_stat = 2, RULE_reserveMemoryForVariable = 3, 
-		RULE_assignment = 4, RULE_operateOnDeclaredVariable = 5, RULE_if_stat = 6, 
-		RULE_condition_block = 7, RULE_stat_block = 8, RULE_while_stat = 9, RULE_fore_stat = 10, 
-		RULE_blackValue = 11, RULE_blackExpression = 12, RULE_whiteValue = 13, 
-		RULE_expr = 14, RULE_atom = 15;
+		RULE_assignment = 4, RULE_assignmentWithWhite = 5, RULE_operateOnDeclaredVariable = 6, 
+		RULE_if_stat = 7, RULE_condition_block = 8, RULE_stat_block = 9, RULE_while_stat = 10, 
+		RULE_fore_stat = 11, RULE_whiteValue = 12, RULE_blackValue = 13, RULE_blackExpression = 14, 
+		RULE_blackInput = 15, RULE_expr = 16, RULE_atom = 17;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"parse", "block", "stat", "reserveMemoryForVariable", "assignment", "operateOnDeclaredVariable", 
-			"if_stat", "condition_block", "stat_block", "while_stat", "fore_stat", 
-			"blackValue", "blackExpression", "whiteValue", "expr", "atom"
+			"parse", "block", "stat", "reserveMemoryForVariable", "assignment", "assignmentWithWhite", 
+			"operateOnDeclaredVariable", "if_stat", "condition_block", "stat_block", 
+			"while_stat", "fore_stat", "whiteValue", "blackValue", "blackExpression", 
+			"blackInput", "expr", "atom"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -135,7 +136,7 @@ public class ColorfulParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(32);
+			setState(36);
 			block();
 			}
 		}
@@ -183,17 +184,17 @@ public class ColorfulParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(35); 
+			setState(39); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(34);
+				setState(38);
 				stat();
 				}
 				}
-				setState(37); 
+				setState(41); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << TYPE) | (1L << OUT) | (1L << IN) | (1L << IF) | (1L << WHILE) | (1L << FOR) | (1L << ID) | (1L << NEWLINE) | (1L << OTHER))) != 0) );
@@ -212,10 +213,13 @@ public class ColorfulParser extends Parser {
 
 	public static class StatContext extends ParserRuleContext {
 		public Token OTHER;
+		public AssignmentWithWhiteContext assignmentWithWhite() {
+			return getRuleContext(AssignmentWithWhiteContext.class,0);
+		}
+		public TerminalNode NEWLINE() { return getToken(ColorfulParser.NEWLINE, 0); }
 		public AssignmentContext assignment() {
 			return getRuleContext(AssignmentContext.class,0);
 		}
-		public TerminalNode NEWLINE() { return getToken(ColorfulParser.NEWLINE, 0); }
 		public ReserveMemoryForVariableContext reserveMemoryForVariable() {
 			return getRuleContext(ReserveMemoryForVariableContext.class,0);
 		}
@@ -231,14 +235,17 @@ public class ColorfulParser extends Parser {
 		public Fore_statContext fore_stat() {
 			return getRuleContext(Fore_statContext.class,0);
 		}
+		public WhiteValueContext whiteValue() {
+			return getRuleContext(WhiteValueContext.class,0);
+		}
+		public BlackInputContext blackInput() {
+			return getRuleContext(BlackInputContext.class,0);
+		}
 		public BlackValueContext blackValue() {
 			return getRuleContext(BlackValueContext.class,0);
 		}
 		public BlackExpressionContext blackExpression() {
 			return getRuleContext(BlackExpressionContext.class,0);
-		}
-		public WhiteValueContext whiteValue() {
-			return getRuleContext(WhiteValueContext.class,0);
 		}
 		public TerminalNode OTHER() { return getToken(ColorfulParser.OTHER, 0); }
 		public StatContext(ParserRuleContext parent, int invokingState) {
@@ -264,64 +271,56 @@ public class ColorfulParser extends Parser {
 		StatContext _localctx = new StatContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_stat);
 		try {
-			setState(72);
+			setState(82);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(39);
-				assignment();
-				setState(40);
+				setState(43);
+				assignmentWithWhite();
+				setState(44);
 				match(NEWLINE);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(42);
-				reserveMemoryForVariable();
-				setState(43);
+				setState(46);
+				assignment();
+				setState(47);
 				match(NEWLINE);
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(45);
-				operateOnDeclaredVariable();
-				setState(46);
+				setState(49);
+				reserveMemoryForVariable();
+				setState(50);
 				match(NEWLINE);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(48);
-				if_stat();
-				setState(50);
-				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
-				case 1:
-					{
-					setState(49);
-					match(NEWLINE);
-					}
-					break;
-				}
+				setState(52);
+				operateOnDeclaredVariable();
+				setState(53);
+				match(NEWLINE);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(52);
-				while_stat();
-				setState(54);
+				setState(55);
+				if_stat();
+				setState(57);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 				case 1:
 					{
-					setState(53);
+					setState(56);
 					match(NEWLINE);
 					}
 					break;
@@ -331,14 +330,14 @@ public class ColorfulParser extends Parser {
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(56);
-				fore_stat();
-				setState(58);
+				setState(59);
+				while_stat();
+				setState(61);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 				case 1:
 					{
-					setState(57);
+					setState(60);
 					match(NEWLINE);
 					}
 					break;
@@ -348,41 +347,67 @@ public class ColorfulParser extends Parser {
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(60);
-				blackValue();
-				setState(61);
-				match(NEWLINE);
+				setState(63);
+				fore_stat();
+				setState(65);
+				_errHandler.sync(this);
+				switch ( getInterpreter().adaptivePredict(_input,3,_ctx) ) {
+				case 1:
+					{
+					setState(64);
+					match(NEWLINE);
+					}
+					break;
+				}
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(63);
-				blackExpression();
-				setState(64);
+				setState(67);
+				whiteValue();
+				setState(68);
 				match(NEWLINE);
 				}
 				break;
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(66);
-				whiteValue();
-				setState(67);
+				setState(70);
+				blackInput();
+				setState(71);
 				match(NEWLINE);
 				}
 				break;
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(69);
+				setState(73);
+				blackValue();
+				setState(74);
 				match(NEWLINE);
 				}
 				break;
 			case 11:
 				enterOuterAlt(_localctx, 11);
 				{
-				setState(70);
+				setState(76);
+				blackExpression();
+				setState(77);
+				match(NEWLINE);
+				}
+				break;
+			case 12:
+				enterOuterAlt(_localctx, 12);
+				{
+				setState(79);
+				match(NEWLINE);
+				}
+				break;
+			case 13:
+				enterOuterAlt(_localctx, 13);
+				{
+				setState(80);
 				((StatContext)_localctx).OTHER = match(OTHER);
 				System.err.println("Unknown char: " + (((StatContext)_localctx).OTHER!=null?((StatContext)_localctx).OTHER.getText():null));
 				}
@@ -428,9 +453,9 @@ public class ColorfulParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(74);
+			setState(84);
 			match(TYPE);
-			setState(75);
+			setState(85);
 			match(ID);
 			}
 		}
@@ -477,14 +502,73 @@ public class ColorfulParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77);
+			setState(87);
 			match(TYPE);
-			setState(78);
+			setState(88);
 			match(ID);
-			setState(79);
+			setState(89);
 			match(ASSIGN);
-			setState(80);
+			setState(90);
 			expr(0);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AssignmentWithWhiteContext extends ParserRuleContext {
+		public Token varType;
+		public Token varName;
+		public Token type;
+		public TerminalNode ASSIGN() { return getToken(ColorfulParser.ASSIGN, 0); }
+		public TerminalNode IN() { return getToken(ColorfulParser.IN, 0); }
+		public List<TerminalNode> TYPE() { return getTokens(ColorfulParser.TYPE); }
+		public TerminalNode TYPE(int i) {
+			return getToken(ColorfulParser.TYPE, i);
+		}
+		public TerminalNode ID() { return getToken(ColorfulParser.ID, 0); }
+		public AssignmentWithWhiteContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assignmentWithWhite; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).enterAssignmentWithWhite(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).exitAssignmentWithWhite(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ColorfulVisitor ) return ((ColorfulVisitor<? extends T>)visitor).visitAssignmentWithWhite(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final AssignmentWithWhiteContext assignmentWithWhite() throws RecognitionException {
+		AssignmentWithWhiteContext _localctx = new AssignmentWithWhiteContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_assignmentWithWhite);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(92);
+			((AssignmentWithWhiteContext)_localctx).varType = match(TYPE);
+			setState(93);
+			((AssignmentWithWhiteContext)_localctx).varName = match(ID);
+			setState(94);
+			match(ASSIGN);
+			setState(95);
+			match(IN);
+			setState(96);
+			((AssignmentWithWhiteContext)_localctx).type = match(TYPE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -525,15 +609,15 @@ public class ColorfulParser extends Parser {
 
 	public final OperateOnDeclaredVariableContext operateOnDeclaredVariable() throws RecognitionException {
 		OperateOnDeclaredVariableContext _localctx = new OperateOnDeclaredVariableContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_operateOnDeclaredVariable);
+		enterRule(_localctx, 12, RULE_operateOnDeclaredVariable);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(82);
+			setState(98);
 			match(ID);
-			setState(83);
+			setState(99);
 			match(ASSIGN);
-			setState(84);
+			setState(100);
 			expr(0);
 			}
 		}
@@ -587,43 +671,43 @@ public class ColorfulParser extends Parser {
 
 	public final If_statContext if_stat() throws RecognitionException {
 		If_statContext _localctx = new If_statContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_if_stat);
+		enterRule(_localctx, 14, RULE_if_stat);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(86);
+			setState(102);
 			match(IF);
-			setState(87);
+			setState(103);
 			condition_block();
-			setState(93);
+			setState(109);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(88);
+					setState(104);
 					match(ELSE);
-					setState(89);
+					setState(105);
 					match(IF);
-					setState(90);
+					setState(106);
 					condition_block();
 					}
 					} 
 				}
-				setState(95);
+				setState(111);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			}
-			setState(98);
+			setState(114);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
 			case 1:
 				{
-				setState(96);
+				setState(112);
 				match(ELSE);
-				setState(97);
+				setState(113);
 				stat_block();
 				}
 				break;
@@ -669,13 +753,13 @@ public class ColorfulParser extends Parser {
 
 	public final Condition_blockContext condition_block() throws RecognitionException {
 		Condition_blockContext _localctx = new Condition_blockContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_condition_block);
+		enterRule(_localctx, 16, RULE_condition_block);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(100);
+			setState(116);
 			expr(0);
-			setState(101);
+			setState(117);
 			stat_block();
 			}
 		}
@@ -720,19 +804,19 @@ public class ColorfulParser extends Parser {
 
 	public final Stat_blockContext stat_block() throws RecognitionException {
 		Stat_blockContext _localctx = new Stat_blockContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_stat_block);
+		enterRule(_localctx, 18, RULE_stat_block);
 		try {
-			setState(108);
+			setState(124);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case OBRACE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(103);
+				setState(119);
 				match(OBRACE);
-				setState(104);
+				setState(120);
 				block();
-				setState(105);
+				setState(121);
 				match(CBRACE);
 				}
 				break;
@@ -747,7 +831,7 @@ public class ColorfulParser extends Parser {
 			case OTHER:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(107);
+				setState(123);
 				stat();
 				}
 				break;
@@ -795,15 +879,15 @@ public class ColorfulParser extends Parser {
 
 	public final While_statContext while_stat() throws RecognitionException {
 		While_statContext _localctx = new While_statContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_while_stat);
+		enterRule(_localctx, 20, RULE_while_stat);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(110);
+			setState(126);
 			match(WHILE);
-			setState(111);
+			setState(127);
 			expr(0);
-			setState(112);
+			setState(128);
 			stat_block();
 			}
 		}
@@ -856,21 +940,21 @@ public class ColorfulParser extends Parser {
 
 	public final Fore_statContext fore_stat() throws RecognitionException {
 		Fore_statContext _localctx = new Fore_statContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_fore_stat);
+		enterRule(_localctx, 22, RULE_fore_stat);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(114);
+			setState(130);
 			match(FOR);
-			setState(115);
+			setState(131);
 			expr(0);
 			{
-			setState(116);
+			setState(132);
 			match(IF);
-			setState(117);
+			setState(133);
 			expr(0);
-			setState(118);
+			setState(134);
 			((Fore_statContext)_localctx).op = _input.LT(1);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GREATER) | (1L << LESS) | (1L << GREATER_EQ) | (1L << LESS_EQ))) != 0)) ) {
@@ -881,13 +965,59 @@ public class ColorfulParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(119);
+			setState(135);
 			expr(0);
 			}
-			setState(121);
+			setState(137);
 			expr(0);
-			setState(122);
+			setState(138);
 			stat_block();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class WhiteValueContext extends ParserRuleContext {
+		public Token type;
+		public TerminalNode IN() { return getToken(ColorfulParser.IN, 0); }
+		public TerminalNode TYPE() { return getToken(ColorfulParser.TYPE, 0); }
+		public WhiteValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_whiteValue; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).enterWhiteValue(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).exitWhiteValue(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof ColorfulVisitor ) return ((ColorfulVisitor<? extends T>)visitor).visitWhiteValue(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final WhiteValueContext whiteValue() throws RecognitionException {
+		WhiteValueContext _localctx = new WhiteValueContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_whiteValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(140);
+			match(IN);
+			setState(141);
+			((WhiteValueContext)_localctx).type = match(TYPE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -926,13 +1056,13 @@ public class ColorfulParser extends Parser {
 
 	public final BlackValueContext blackValue() throws RecognitionException {
 		BlackValueContext _localctx = new BlackValueContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_blackValue);
+		enterRule(_localctx, 26, RULE_blackValue);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(124);
+			setState(143);
 			match(OUT);
-			setState(125);
+			setState(144);
 			((BlackValueContext)_localctx).type = match(TYPE);
 			}
 		}
@@ -973,13 +1103,13 @@ public class ColorfulParser extends Parser {
 
 	public final BlackExpressionContext blackExpression() throws RecognitionException {
 		BlackExpressionContext _localctx = new BlackExpressionContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_blackExpression);
+		enterRule(_localctx, 28, RULE_blackExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(127);
+			setState(146);
 			match(OUT);
-			setState(128);
+			setState(147);
 			expr(0);
 			}
 		}
@@ -994,39 +1124,42 @@ public class ColorfulParser extends Parser {
 		return _localctx;
 	}
 
-	public static class WhiteValueContext extends ParserRuleContext {
+	public static class BlackInputContext extends ParserRuleContext {
 		public Token type;
+		public TerminalNode OUT() { return getToken(ColorfulParser.OUT, 0); }
 		public TerminalNode IN() { return getToken(ColorfulParser.IN, 0); }
 		public TerminalNode TYPE() { return getToken(ColorfulParser.TYPE, 0); }
-		public WhiteValueContext(ParserRuleContext parent, int invokingState) {
+		public BlackInputContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_whiteValue; }
+		@Override public int getRuleIndex() { return RULE_blackInput; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).enterWhiteValue(this);
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).enterBlackInput(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).exitWhiteValue(this);
+			if ( listener instanceof ColorfulListener ) ((ColorfulListener)listener).exitBlackInput(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof ColorfulVisitor ) return ((ColorfulVisitor<? extends T>)visitor).visitWhiteValue(this);
+			if ( visitor instanceof ColorfulVisitor ) return ((ColorfulVisitor<? extends T>)visitor).visitBlackInput(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final WhiteValueContext whiteValue() throws RecognitionException {
-		WhiteValueContext _localctx = new WhiteValueContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_whiteValue);
+	public final BlackInputContext blackInput() throws RecognitionException {
+		BlackInputContext _localctx = new BlackInputContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_blackInput);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(130);
+			setState(149);
+			match(OUT);
+			setState(150);
 			match(IN);
-			setState(131);
-			((WhiteValueContext)_localctx).type = match(TYPE);
+			setState(151);
+			((BlackInputContext)_localctx).type = match(TYPE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1291,14 +1424,14 @@ public class ColorfulParser extends Parser {
 		int _parentState = getState();
 		ExprContext _localctx = new ExprContext(_ctx, _parentState);
 		ExprContext _prevctx = _localctx;
-		int _startState = 28;
-		enterRecursionRule(_localctx, 28, RULE_expr, _p);
+		int _startState = 32;
+		enterRecursionRule(_localctx, 32, RULE_expr, _p);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(136);
+			setState(156);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IN:
@@ -1307,7 +1440,7 @@ public class ColorfulParser extends Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(134);
+				setState(154);
 				whiteValue();
 				}
 				break;
@@ -1321,7 +1454,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new AtomExprContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(135);
+				setState(155);
 				atom();
 				}
 				break;
@@ -1329,7 +1462,7 @@ public class ColorfulParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(162);
+			setState(182);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -1337,16 +1470,16 @@ public class ColorfulParser extends Parser {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(160);
+					setState(180);
 					_errHandler.sync(this);
 					switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 					case 1:
 						{
 						_localctx = new MultiplicationExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(138);
+						setState(158);
 						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
-						setState(139);
+						setState(159);
 						((MultiplicationExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==MUL || _la==DIV) ) {
@@ -1357,7 +1490,7 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(140);
+						setState(160);
 						expr(11);
 						}
 						break;
@@ -1365,11 +1498,11 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new PwrExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(141);
+						setState(161);
 						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
-						setState(142);
+						setState(162);
 						((PwrExprContext)_localctx).op = match(PWR);
-						setState(143);
+						setState(163);
 						expr(10);
 						}
 						break;
@@ -1377,11 +1510,11 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new ModExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(144);
+						setState(164);
 						if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
-						setState(145);
+						setState(165);
 						((ModExprContext)_localctx).op = match(MOD);
-						setState(146);
+						setState(166);
 						expr(7);
 						}
 						break;
@@ -1389,9 +1522,9 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new AdditiveExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(147);
+						setState(167);
 						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
-						setState(148);
+						setState(168);
 						((AdditiveExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==ADD || _la==SUB) ) {
@@ -1402,7 +1535,7 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(149);
+						setState(169);
 						expr(6);
 						}
 						break;
@@ -1410,9 +1543,9 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new RelationalExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(150);
+						setState(170);
 						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
-						setState(151);
+						setState(171);
 						((RelationalExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GREATER) | (1L << LESS) | (1L << GREATER_EQ) | (1L << LESS_EQ))) != 0)) ) {
@@ -1423,7 +1556,7 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(152);
+						setState(172);
 						expr(5);
 						}
 						break;
@@ -1431,9 +1564,9 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new EqualityExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(153);
+						setState(173);
 						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-						setState(154);
+						setState(174);
 						((EqualityExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
 						if ( !(_la==EQ || _la==NEQ) ) {
@@ -1444,7 +1577,7 @@ public class ColorfulParser extends Parser {
 							_errHandler.reportMatch(this);
 							consume();
 						}
-						setState(155);
+						setState(175);
 						expr(4);
 						}
 						break;
@@ -1452,9 +1585,9 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new SqrtExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(156);
+						setState(176);
 						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
-						setState(157);
+						setState(177);
 						((SqrtExprContext)_localctx).op = match(SQRT);
 						}
 						break;
@@ -1462,16 +1595,16 @@ public class ColorfulParser extends Parser {
 						{
 						_localctx = new FactorialExprContext(new ExprContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expr);
-						setState(158);
+						setState(178);
 						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
-						setState(159);
+						setState(179);
 						((FactorialExprContext)_localctx).op = match(FACTORIAL);
 						}
 						break;
 					}
 					} 
 				}
-				setState(164);
+				setState(184);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
 			}
@@ -1608,20 +1741,20 @@ public class ColorfulParser extends Parser {
 
 	public final AtomContext atom() throws RecognitionException {
 		AtomContext _localctx = new AtomContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_atom);
+		enterRule(_localctx, 34, RULE_atom);
 		try {
-			setState(174);
+			setState(194);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case OPAR:
 				_localctx = new ParExprContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(165);
+				setState(185);
 				match(OPAR);
-				setState(166);
+				setState(186);
 				expr(0);
-				setState(167);
+				setState(187);
 				match(CPAR);
 				}
 				break;
@@ -1629,7 +1762,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new IntegerAtomContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(169);
+				setState(189);
 				match(INT);
 				}
 				break;
@@ -1637,7 +1770,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new DoubleAtomContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(170);
+				setState(190);
 				match(DBL);
 				}
 				break;
@@ -1645,7 +1778,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new BooleanAtomContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(171);
+				setState(191);
 				match(BOOL);
 				}
 				break;
@@ -1653,7 +1786,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new IdAtomContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(172);
+				setState(192);
 				match(ID);
 				}
 				break;
@@ -1661,7 +1794,7 @@ public class ColorfulParser extends Parser {
 				_localctx = new StringAtomContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(173);
+				setState(193);
 				match(STR);
 				}
 				break;
@@ -1682,7 +1815,7 @@ public class ColorfulParser extends Parser {
 
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 14:
+		case 16:
 			return expr_sempred((ExprContext)_localctx, predIndex);
 		}
 		return true;
@@ -1710,60 +1843,66 @@ public class ColorfulParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3(\u00b3\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3(\u00c7\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
-		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\3"+
-		"\3\6\3&\n\3\r\3\16\3\'\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4"+
-		"\65\n\4\3\4\3\4\5\49\n\4\3\4\3\4\5\4=\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
-		"\3\4\3\4\3\4\3\4\3\4\5\4K\n\4\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\7\3\7"+
-		"\3\7\3\7\3\b\3\b\3\b\3\b\3\b\7\b^\n\b\f\b\16\ba\13\b\3\b\3\b\5\be\n\b"+
-		"\3\t\3\t\3\t\3\n\3\n\3\n\3\n\3\n\5\no\n\n\3\13\3\13\3\13\3\13\3\f\3\f"+
-		"\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\16\3\16\3\16\3\17\3\17"+
-		"\3\17\3\20\3\20\3\20\5\20\u008b\n\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20"+
-		"\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20\3\20"+
-		"\3\20\7\20\u00a3\n\20\f\20\16\20\u00a6\13\20\3\21\3\21\3\21\3\21\3\21"+
-		"\3\21\3\21\3\21\3\21\5\21\u00b1\n\21\3\21\2\3\36\22\2\4\6\b\n\f\16\20"+
-		"\22\24\26\30\32\34\36 \2\6\3\2\6\t\3\2\n\13\3\2\f\r\3\2\4\5\2\u00c1\2"+
-		"\"\3\2\2\2\4%\3\2\2\2\6J\3\2\2\2\bL\3\2\2\2\nO\3\2\2\2\fT\3\2\2\2\16X"+
-		"\3\2\2\2\20f\3\2\2\2\22n\3\2\2\2\24p\3\2\2\2\26t\3\2\2\2\30~\3\2\2\2\32"+
-		"\u0081\3\2\2\2\34\u0084\3\2\2\2\36\u008a\3\2\2\2 \u00b0\3\2\2\2\"#\5\4"+
-		"\3\2#\3\3\2\2\2$&\5\6\4\2%$\3\2\2\2&\'\3\2\2\2\'%\3\2\2\2\'(\3\2\2\2("+
-		"\5\3\2\2\2)*\5\n\6\2*+\7\"\2\2+K\3\2\2\2,-\5\b\5\2-.\7\"\2\2.K\3\2\2\2"+
-		"/\60\5\f\7\2\60\61\7\"\2\2\61K\3\2\2\2\62\64\5\16\b\2\63\65\7\"\2\2\64"+
-		"\63\3\2\2\2\64\65\3\2\2\2\65K\3\2\2\2\668\5\24\13\2\679\7\"\2\28\67\3"+
-		"\2\2\289\3\2\2\29K\3\2\2\2:<\5\26\f\2;=\7\"\2\2<;\3\2\2\2<=\3\2\2\2=K"+
-		"\3\2\2\2>?\5\30\r\2?@\7\"\2\2@K\3\2\2\2AB\5\32\16\2BC\7\"\2\2CK\3\2\2"+
-		"\2DE\5\34\17\2EF\7\"\2\2FK\3\2\2\2GK\7\"\2\2HI\7(\2\2IK\b\4\1\2J)\3\2"+
-		"\2\2J,\3\2\2\2J/\3\2\2\2J\62\3\2\2\2J\66\3\2\2\2J:\3\2\2\2J>\3\2\2\2J"+
-		"A\3\2\2\2JD\3\2\2\2JG\3\2\2\2JH\3\2\2\2K\7\3\2\2\2LM\7\3\2\2MN\7!\2\2"+
-		"N\t\3\2\2\2OP\7\3\2\2PQ\7!\2\2QR\7\22\2\2RS\5\36\20\2S\13\3\2\2\2TU\7"+
-		"!\2\2UV\7\22\2\2VW\5\36\20\2W\r\3\2\2\2XY\7\31\2\2Y_\5\20\t\2Z[\7\32\2"+
-		"\2[\\\7\31\2\2\\^\5\20\t\2]Z\3\2\2\2^a\3\2\2\2_]\3\2\2\2_`\3\2\2\2`d\3"+
-		"\2\2\2a_\3\2\2\2bc\7\32\2\2ce\5\22\n\2db\3\2\2\2de\3\2\2\2e\17\3\2\2\2"+
-		"fg\5\36\20\2gh\5\22\n\2h\21\3\2\2\2ij\7\25\2\2jk\5\4\3\2kl\7\26\2\2lo"+
-		"\3\2\2\2mo\5\6\4\2ni\3\2\2\2nm\3\2\2\2o\23\3\2\2\2pq\7\33\2\2qr\5\36\20"+
-		"\2rs\5\22\n\2s\25\3\2\2\2tu\7\34\2\2uv\5\36\20\2vw\7\31\2\2wx\5\36\20"+
-		"\2xy\t\2\2\2yz\5\36\20\2z{\3\2\2\2{|\5\36\20\2|}\5\22\n\2}\27\3\2\2\2"+
-		"~\177\7\27\2\2\177\u0080\7\3\2\2\u0080\31\3\2\2\2\u0081\u0082\7\27\2\2"+
-		"\u0082\u0083\5\36\20\2\u0083\33\3\2\2\2\u0084\u0085\7\30\2\2\u0085\u0086"+
-		"\7\3\2\2\u0086\35\3\2\2\2\u0087\u0088\b\20\1\2\u0088\u008b\5\34\17\2\u0089"+
-		"\u008b\5 \21\2\u008a\u0087\3\2\2\2\u008a\u0089\3\2\2\2\u008b\u00a4\3\2"+
-		"\2\2\u008c\u008d\f\f\2\2\u008d\u008e\t\3\2\2\u008e\u00a3\5\36\20\r\u008f"+
-		"\u0090\f\13\2\2\u0090\u0091\7\16\2\2\u0091\u00a3\5\36\20\f\u0092\u0093"+
-		"\f\b\2\2\u0093\u0094\7\20\2\2\u0094\u00a3\5\36\20\t\u0095\u0096\f\7\2"+
-		"\2\u0096\u0097\t\4\2\2\u0097\u00a3\5\36\20\b\u0098\u0099\f\6\2\2\u0099"+
-		"\u009a\t\2\2\2\u009a\u00a3\5\36\20\7\u009b\u009c\f\5\2\2\u009c\u009d\t"+
-		"\5\2\2\u009d\u00a3\5\36\20\6\u009e\u009f\f\n\2\2\u009f\u00a3\7\17\2\2"+
-		"\u00a0\u00a1\f\t\2\2\u00a1\u00a3\7\21\2\2\u00a2\u008c\3\2\2\2\u00a2\u008f"+
-		"\3\2\2\2\u00a2\u0092\3\2\2\2\u00a2\u0095\3\2\2\2\u00a2\u0098\3\2\2\2\u00a2"+
-		"\u009b\3\2\2\2\u00a2\u009e\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a3\u00a6\3\2"+
-		"\2\2\u00a4\u00a2\3\2\2\2\u00a4\u00a5\3\2\2\2\u00a5\37\3\2\2\2\u00a6\u00a4"+
-		"\3\2\2\2\u00a7\u00a8\7\23\2\2\u00a8\u00a9\5\36\20\2\u00a9\u00aa\7\24\2"+
-		"\2\u00aa\u00b1\3\2\2\2\u00ab\u00b1\7\35\2\2\u00ac\u00b1\7\36\2\2\u00ad"+
-		"\u00b1\7\37\2\2\u00ae\u00b1\7!\2\2\u00af\u00b1\7 \2\2\u00b0\u00a7\3\2"+
-		"\2\2\u00b0\u00ab\3\2\2\2\u00b0\u00ac\3\2\2\2\u00b0\u00ad\3\2\2\2\u00b0"+
-		"\u00ae\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1!\3\2\2\2\16\'\648<J_dn\u008a"+
-		"\u00a2\u00a4\u00b0";
+		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
+		"\4\23\t\23\3\2\3\2\3\3\6\3*\n\3\r\3\16\3+\3\4\3\4\3\4\3\4\3\4\3\4\3\4"+
+		"\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4<\n\4\3\4\3\4\5\4@\n\4\3\4\3\4\5\4D\n"+
+		"\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4U\n"+
+		"\4\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3\b\3\b\3\b"+
+		"\3\b\3\t\3\t\3\t\3\t\3\t\7\tn\n\t\f\t\16\tq\13\t\3\t\3\t\5\tu\n\t\3\n"+
+		"\3\n\3\n\3\13\3\13\3\13\3\13\3\13\5\13\177\n\13\3\f\3\f\3\f\3\f\3\r\3"+
+		"\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\r\3\16\3\16\3\16\3\17\3\17\3\17\3\20"+
+		"\3\20\3\20\3\21\3\21\3\21\3\21\3\22\3\22\3\22\5\22\u009f\n\22\3\22\3\22"+
+		"\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22\3\22"+
+		"\3\22\3\22\3\22\3\22\3\22\3\22\7\22\u00b7\n\22\f\22\16\22\u00ba\13\22"+
+		"\3\23\3\23\3\23\3\23\3\23\3\23\3\23\3\23\3\23\5\23\u00c5\n\23\3\23\2\3"+
+		"\"\24\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$\2\6\3\2\6\t\3\2\n\13"+
+		"\3\2\f\r\3\2\4\5\2\u00d5\2&\3\2\2\2\4)\3\2\2\2\6T\3\2\2\2\bV\3\2\2\2\n"+
+		"Y\3\2\2\2\f^\3\2\2\2\16d\3\2\2\2\20h\3\2\2\2\22v\3\2\2\2\24~\3\2\2\2\26"+
+		"\u0080\3\2\2\2\30\u0084\3\2\2\2\32\u008e\3\2\2\2\34\u0091\3\2\2\2\36\u0094"+
+		"\3\2\2\2 \u0097\3\2\2\2\"\u009e\3\2\2\2$\u00c4\3\2\2\2&\'\5\4\3\2\'\3"+
+		"\3\2\2\2(*\5\6\4\2)(\3\2\2\2*+\3\2\2\2+)\3\2\2\2+,\3\2\2\2,\5\3\2\2\2"+
+		"-.\5\f\7\2./\7\"\2\2/U\3\2\2\2\60\61\5\n\6\2\61\62\7\"\2\2\62U\3\2\2\2"+
+		"\63\64\5\b\5\2\64\65\7\"\2\2\65U\3\2\2\2\66\67\5\16\b\2\678\7\"\2\28U"+
+		"\3\2\2\29;\5\20\t\2:<\7\"\2\2;:\3\2\2\2;<\3\2\2\2<U\3\2\2\2=?\5\26\f\2"+
+		">@\7\"\2\2?>\3\2\2\2?@\3\2\2\2@U\3\2\2\2AC\5\30\r\2BD\7\"\2\2CB\3\2\2"+
+		"\2CD\3\2\2\2DU\3\2\2\2EF\5\32\16\2FG\7\"\2\2GU\3\2\2\2HI\5 \21\2IJ\7\""+
+		"\2\2JU\3\2\2\2KL\5\34\17\2LM\7\"\2\2MU\3\2\2\2NO\5\36\20\2OP\7\"\2\2P"+
+		"U\3\2\2\2QU\7\"\2\2RS\7(\2\2SU\b\4\1\2T-\3\2\2\2T\60\3\2\2\2T\63\3\2\2"+
+		"\2T\66\3\2\2\2T9\3\2\2\2T=\3\2\2\2TA\3\2\2\2TE\3\2\2\2TH\3\2\2\2TK\3\2"+
+		"\2\2TN\3\2\2\2TQ\3\2\2\2TR\3\2\2\2U\7\3\2\2\2VW\7\3\2\2WX\7!\2\2X\t\3"+
+		"\2\2\2YZ\7\3\2\2Z[\7!\2\2[\\\7\22\2\2\\]\5\"\22\2]\13\3\2\2\2^_\7\3\2"+
+		"\2_`\7!\2\2`a\7\22\2\2ab\7\30\2\2bc\7\3\2\2c\r\3\2\2\2de\7!\2\2ef\7\22"+
+		"\2\2fg\5\"\22\2g\17\3\2\2\2hi\7\31\2\2io\5\22\n\2jk\7\32\2\2kl\7\31\2"+
+		"\2ln\5\22\n\2mj\3\2\2\2nq\3\2\2\2om\3\2\2\2op\3\2\2\2pt\3\2\2\2qo\3\2"+
+		"\2\2rs\7\32\2\2su\5\24\13\2tr\3\2\2\2tu\3\2\2\2u\21\3\2\2\2vw\5\"\22\2"+
+		"wx\5\24\13\2x\23\3\2\2\2yz\7\25\2\2z{\5\4\3\2{|\7\26\2\2|\177\3\2\2\2"+
+		"}\177\5\6\4\2~y\3\2\2\2~}\3\2\2\2\177\25\3\2\2\2\u0080\u0081\7\33\2\2"+
+		"\u0081\u0082\5\"\22\2\u0082\u0083\5\24\13\2\u0083\27\3\2\2\2\u0084\u0085"+
+		"\7\34\2\2\u0085\u0086\5\"\22\2\u0086\u0087\7\31\2\2\u0087\u0088\5\"\22"+
+		"\2\u0088\u0089\t\2\2\2\u0089\u008a\5\"\22\2\u008a\u008b\3\2\2\2\u008b"+
+		"\u008c\5\"\22\2\u008c\u008d\5\24\13\2\u008d\31\3\2\2\2\u008e\u008f\7\30"+
+		"\2\2\u008f\u0090\7\3\2\2\u0090\33\3\2\2\2\u0091\u0092\7\27\2\2\u0092\u0093"+
+		"\7\3\2\2\u0093\35\3\2\2\2\u0094\u0095\7\27\2\2\u0095\u0096\5\"\22\2\u0096"+
+		"\37\3\2\2\2\u0097\u0098\7\27\2\2\u0098\u0099\7\30\2\2\u0099\u009a\7\3"+
+		"\2\2\u009a!\3\2\2\2\u009b\u009c\b\22\1\2\u009c\u009f\5\32\16\2\u009d\u009f"+
+		"\5$\23\2\u009e\u009b\3\2\2\2\u009e\u009d\3\2\2\2\u009f\u00b8\3\2\2\2\u00a0"+
+		"\u00a1\f\f\2\2\u00a1\u00a2\t\3\2\2\u00a2\u00b7\5\"\22\r\u00a3\u00a4\f"+
+		"\13\2\2\u00a4\u00a5\7\16\2\2\u00a5\u00b7\5\"\22\f\u00a6\u00a7\f\b\2\2"+
+		"\u00a7\u00a8\7\20\2\2\u00a8\u00b7\5\"\22\t\u00a9\u00aa\f\7\2\2\u00aa\u00ab"+
+		"\t\4\2\2\u00ab\u00b7\5\"\22\b\u00ac\u00ad\f\6\2\2\u00ad\u00ae\t\2\2\2"+
+		"\u00ae\u00b7\5\"\22\7\u00af\u00b0\f\5\2\2\u00b0\u00b1\t\5\2\2\u00b1\u00b7"+
+		"\5\"\22\6\u00b2\u00b3\f\n\2\2\u00b3\u00b7\7\17\2\2\u00b4\u00b5\f\t\2\2"+
+		"\u00b5\u00b7\7\21\2\2\u00b6\u00a0\3\2\2\2\u00b6\u00a3\3\2\2\2\u00b6\u00a6"+
+		"\3\2\2\2\u00b6\u00a9\3\2\2\2\u00b6\u00ac\3\2\2\2\u00b6\u00af\3\2\2\2\u00b6"+
+		"\u00b2\3\2\2\2\u00b6\u00b4\3\2\2\2\u00b7\u00ba\3\2\2\2\u00b8\u00b6\3\2"+
+		"\2\2\u00b8\u00b9\3\2\2\2\u00b9#\3\2\2\2\u00ba\u00b8\3\2\2\2\u00bb\u00bc"+
+		"\7\23\2\2\u00bc\u00bd\5\"\22\2\u00bd\u00be\7\24\2\2\u00be\u00c5\3\2\2"+
+		"\2\u00bf\u00c5\7\35\2\2\u00c0\u00c5\7\36\2\2\u00c1\u00c5\7\37\2\2\u00c2"+
+		"\u00c5\7!\2\2\u00c3\u00c5\7 \2\2\u00c4\u00bb\3\2\2\2\u00c4\u00bf\3\2\2"+
+		"\2\u00c4\u00c0\3\2\2\2\u00c4\u00c1\3\2\2\2\u00c4\u00c2\3\2\2\2\u00c4\u00c3"+
+		"\3\2\2\2\u00c5%\3\2\2\2\16+;?CTot~\u009e\u00b6\u00b8\u00c4";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

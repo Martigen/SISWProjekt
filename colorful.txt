@@ -1,16 +1,37 @@
-Black ->Podaj liczbe: ->
-# Green greenMod mix Green white
-# white Green
-# Black white Green
-#Black ->greenmode->
-Green x
-x mix White Green
-Black x ~
+Black ->Podaj dowolna liczbe:->
+Darkgreen x mix White Darkgreen~
 
-Darkgreen m mix 5.0
-Darkgreen i mix 0.0
-Darkgreen plus mix 1.0
 
-silver i transparent i<m plus light
-    Black->jestem double!->
+Green xx
+Black ->Podaj liczbe calkowita:->
+xx mix White Green
+
+Brown brown~
+Brown finished mix false~
+Purple purple~
+
+gold finished indigo false light
+    Black ->Czy chcesz wyswietlic sume podanych liczb? (tak, nie)->
+    purple mix White Purple~
+
+    transparent purple indigo ->tak-> light
+        brown mix true
+        finished mix true
+    dark violet transparent purple indigo ->nie-> light
+        brown mix false
+        finished mix true
+    dark violet light
+        Black ->Podano bledny parametr!->
+        finished mix false
+    dark
+dark
+
+
+#Darkgreen w mix 5.0
+#Darkgreen m
+#m mix 25.5
+
+transparent brown light
+    Darkgreen mm mix x red xx
+    Black ->Suma podanych liczb wynosi: -> red mm
 dark

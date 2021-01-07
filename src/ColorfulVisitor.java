@@ -1,4 +1,4 @@
-// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -40,6 +40,12 @@ public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssignment(ColorfulParser.AssignmentContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ColorfulParser#assignmentWithWhite}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ColorfulParser#operateOnDeclaredVariable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -76,6 +82,12 @@ public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFore_stat(ColorfulParser.Fore_statContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ColorfulParser#blackValue}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -88,11 +100,11 @@ public interface ColorfulVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * Visit a parse tree produced by {@link ColorfulParser#blackInput}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	T visitBlackInput(ColorfulParser.BlackInputContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code pwrExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.

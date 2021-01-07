@@ -1,4 +1,4 @@
-// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -56,6 +56,16 @@ public interface ColorfulListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAssignment(ColorfulParser.AssignmentContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ColorfulParser#assignmentWithWhite}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#assignmentWithWhite}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ColorfulParser#operateOnDeclaredVariable}.
 	 * @param ctx the parse tree
@@ -117,6 +127,16 @@ public interface ColorfulListener extends ParseTreeListener {
 	 */
 	void exitFore_stat(ColorfulParser.Fore_statContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ColorfulParser#blackValue}.
 	 * @param ctx the parse tree
 	 */
@@ -137,15 +157,15 @@ public interface ColorfulListener extends ParseTreeListener {
 	 */
 	void exitBlackExpression(ColorfulParser.BlackExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * Enter a parse tree produced by {@link ColorfulParser#blackInput}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	void enterBlackInput(ColorfulParser.BlackInputContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ColorfulParser#whiteValue}.
+	 * Exit a parse tree produced by {@link ColorfulParser#blackInput}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhiteValue(ColorfulParser.WhiteValueContext ctx);
+	void exitBlackInput(ColorfulParser.BlackInputContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code pwrExpr}
 	 * labeled alternative in {@link ColorfulParser#expr}.

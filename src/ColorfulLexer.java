@@ -1,4 +1,4 @@
-// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

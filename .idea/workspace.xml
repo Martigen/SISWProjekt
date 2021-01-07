@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d962a1c-dd39-447b-9342-7dfdc51d2115" name="Default Changelist" comment="Added power operator to power double by double.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Colorful.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Colorful.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Colorful.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/colorful.txt" beforeDir="false" afterPath="$PROJECT_DIR$/colorful.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/Colorful.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Colorful/ColorfulLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Colorful.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Colorful.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Colorful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Colorful.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorfulLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorfulVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorfulVisitor.java" afterDir="false" />
@@ -89,6 +82,17 @@
     <configuration name="Colorful" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Colorful" />
       <module name="Colorful" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

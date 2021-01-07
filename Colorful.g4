@@ -10,17 +10,18 @@ block
  : stat+
  ;
 
- stat:      assignment NEWLINE
+ stat:      assignmentWithWhite NEWLINE
+  |         assignment NEWLINE
   |         reserveMemoryForVariable NEWLINE
   |         operateOnDeclaredVariable NEWLINE
   |         if_stat NEWLINE?
   |         while_stat NEWLINE?
   |         fore_stat NEWLINE?
+  |         whiteValue NEWLINE
+  |         blackInput NEWLINE
   |         blackValue NEWLINE
   |         blackExpression NEWLINE
-  |         whiteValue NEWLINE
   |         NEWLINE
-//  |         white NEWLINE
   |         OTHER {System.err.println("Unknown char: " + $OTHER.text);}
   ;
 
@@ -28,6 +29,9 @@ block
   ;
 
  assignment: TYPE ID ASSIGN expr
+  ;
+
+ assignmentWithWhite: varType=TYPE varName=ID ASSIGN IN type=TYPE
   ;
 
  operateOnDeclaredVariable: ID ASSIGN expr
@@ -46,10 +50,11 @@ block
  while_stat: WHILE expr stat_block
   ;
 
- fore_stat: FOR expr  (IF expr op=(GREATER | LESS | GREATER_EQ | LESS_EQ) expr)  expr  stat_block;
-  // white: (type=TYPE | expr)
-  //  ;
-  //
+ fore_stat: FOR expr  (IF expr op=(GREATER | LESS | GREATER_EQ | LESS_EQ) expr)  expr  stat_block
+  ;
+
+ whiteValue: IN type=TYPE
+  ;
 
  blackValue: OUT type=TYPE
   ;
@@ -57,7 +62,8 @@ block
  blackExpression: OUT expr
   ;
 
-  whiteValue: IN type=TYPE;
+ blackInput: OUT IN type=TYPE
+  ;
 
  expr:              expr op=(MUL | DIV) expr                                #multiplicationExpr
         |           expr op=PWR expr                                        #pwrExpr

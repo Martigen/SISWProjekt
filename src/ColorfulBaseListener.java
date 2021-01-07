@@ -1,4 +1,4 @@
-// Generated from G:/Pr-SISW2\Colorful.g4 by ANTLR 4.9
+// Generated from /home/dizz/IdeaProjects/SISWProjekt/Colorful.g4 by ANTLR 4.9
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -70,6 +70,18 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAssignment(ColorfulParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignmentWithWhite(ColorfulParser.AssignmentWithWhiteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -147,6 +159,18 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterWhiteValue(ColorfulParser.WhiteValueContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWhiteValue(ColorfulParser.WhiteValueContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBlackValue(ColorfulParser.BlackValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -171,13 +195,13 @@ public class ColorfulBaseListener implements ColorfulListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhiteValue(ColorfulParser.WhiteValueContext ctx) { }
+	@Override public void enterBlackInput(ColorfulParser.BlackInputContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhiteValue(ColorfulParser.WhiteValueContext ctx) { }
+	@Override public void exitBlackInput(ColorfulParser.BlackInputContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
