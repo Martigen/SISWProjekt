@@ -1,37 +1,7 @@
-Black ->Podaj dowolna liczbe:->
-Darkgreen x mix White Darkgreen~
 
-
-Green xx
-Black ->Podaj liczbe calkowita:->
-xx mix White Green
-
-Brown brown~
-Brown finished mix false~
-Purple purple~
-
-gold finished indigo false light
-    Black ->Czy chcesz wyswietlic sume podanych liczb? (tak, nie)->
-    purple mix White Purple~
-
-    transparent purple indigo ->tak-> light
-        brown mix true
-        finished mix true
-    dark violet transparent purple indigo ->nie-> light
-        brown mix false
-        finished mix true
-    dark violet light
-        Black ->Podano bledny parametr!->
-        finished mix false
-    dark
-dark
-
-
-#Darkgreen w mix 5.0
-#Darkgreen m
-#m mix 25.5
-
-transparent brown light
-    Darkgreen mm mix x red xx
-    Black ->Suma podanych liczb wynosi: -> red mm
+Green j
+Green i
+silver i transparent i < 20 i red 1 light
+    j mix j red 1
+    Black j
 dark

@@ -50,7 +50,7 @@ block
  while_stat: WHILE expr stat_block
   ;
 
- fore_stat: FOR expr  (IF expr op=(GREATER | LESS | GREATER_EQ | LESS_EQ) expr)  expr  stat_block
+ fore_stat: FOR expr (IF expr op=(GREATER | LESS | GREATER_EQ | LESS_EQ) expr)  expr  stat_block
   ;
 
  whiteValue: IN type=TYPE
@@ -142,7 +142,8 @@ WS  :           [ \t]+ -> skip ;
 
 TRUE:           'true' ;
 FALSE:          'false' ;
-STRLIT:         '->' ((~[->])* | '->->') '->' ;
+STRLIT:         '->' ('\\' ["\\] | ~["\\\r\n])* '->' ;
+//STRLIT:         '->' ((~[->])* | '->->') '->' ;
 
 
 fragment VALID_ID_START:    ('a' .. 'z') | ('A' .. 'Z') | '_' ;

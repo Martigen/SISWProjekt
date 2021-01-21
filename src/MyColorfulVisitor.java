@@ -132,7 +132,7 @@ public class MyColorfulVisitor extends ColorfulBaseVisitor<Object> {
 
         if (left instanceof Integer && right instanceof Integer) {
             if (ctx.op.getType() == ColorfulParser.MUL) return (Integer) left * (Integer) right;
-            return (Integer) left / (Integer) right;
+            return (double) (Integer) left / (Integer) right;
         } else if (left instanceof Double && right instanceof Double) {
             if (ctx.op.getType() == ColorfulParser.MUL) return (Double) left * (Double) right;
             return (Double) left / (Double) right;
