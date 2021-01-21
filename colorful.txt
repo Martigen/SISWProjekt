@@ -5,3 +5,9 @@ silver i transparent i < 20 i red 1 light
     j mix j red 1
     Black j
 dark
+
+
+Black -> -2 -2 -2 2222 ->
+
+Purple purple mix -> -2.2 -2 -2 ->
+Black purple
